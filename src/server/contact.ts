@@ -20,7 +20,7 @@ export async function POST(req: Request) {
 
     // 2. Send notification email to you
     await resend.emails.send({
-      from: 'Converte Global <onboarding@resend.dev>',
+      from: 'Converte LEAD <emails@mails.convertesites.com.br>',
       to: 'crorioli81@gmail.com',
       subject: 'Novo Lead: ' + name,
       html: `

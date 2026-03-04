@@ -34,7 +34,7 @@ export default async function handler(req: any, res: any) {
 
     // 2. Send email notification
     await resend.emails.send({
-      from: 'Converte Global <onboarding@resend.dev>',
+      from: 'Converte LEAD <emails@mails.convertesites.com.br>',
       to: 'crorioli81@gmail.com',
       subject: `Novo Lead: ${name}`,
       html: `

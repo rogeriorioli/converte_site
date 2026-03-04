@@ -55,7 +55,7 @@ export const translations = {
     },
     footer: {
       rights: '© 2026 Converte Global. All rights reserved.',
-      location: 'Based in Brazil • Serving the World',
+      location: 'Based in Floripa - Brasil • Serving the World',
       cnpj: 'CNPJ: 58.532.850/0001-10',
     },
     contact: {
@@ -68,6 +68,7 @@ export const translations = {
       success: 'Message sent successfully! We will contact you soon.',
       error: 'Something went wrong. Please try again.',
       loading: 'Sending...',
+      whatsappMessage: 'Hi! I would like more information about your services.'
     }
   },
   pt: {
@@ -124,7 +125,7 @@ export const translations = {
     },
     footer: {
       rights: '© 2026 Converte. Todos os direitos reservados.',
-      location: 'Sediada no Brasil - Floripa - SC',
+      location: 'Sediada em Floripa - Brasil • Atendendo o Mundo',
       cnpj: 'CNPJ: 58.532.850/0001-10',
     },
     contact: {
@@ -137,6 +138,7 @@ export const translations = {
       success: 'Mensagem enviada com sucesso! Entraremos em contato em breve.',
       error: 'Ocorreu um erro. Por favor, tente novamente.',
       loading: 'Enviando...',
+      whatsappMessage: 'Olá! Gostaria de mais informações sobre seus serviços.'
     }
   }
 };

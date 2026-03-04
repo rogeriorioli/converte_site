@@ -34,7 +34,13 @@ import wpLogo from '../assets/WordPress_blue_logo.svg.png';
 import hubImage from '../assets/Gemini_Generated_Image_jb4uwajb4uwajb4u.png';
 
 export default function App() {
-  const [lang, setLang] = useState<Language>('en');
+  const [lang, setLang] = useState<Language>(() => {
+    if (typeof window !== 'undefined') {
+      const browserLang = navigator.language.split('-')[0];
+      return browserLang === 'pt' ? 'pt' : 'en';
+    }
+    return 'en';
+  });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   
@@ -42,6 +48,10 @@ export default function App() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
   const t = translations[lang];
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -79,9 +89,9 @@ export default function App() {
       {/* Navbar */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 backdrop-blur-md border-b border-gray-200 py-4' : 'bg-transparent py-6'}`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-          <div className="flex items-center gap-2">
+          <button onClick={scrollToTop} className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
             <Logo className="h-8 w-auto" />
-          </div>
+          </button>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
@@ -146,7 +156,7 @@ export default function App() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-8 text-gray-900">
+            <h1 className="text-4xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-8 text-gray-900">
               {t.hero.title}
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed mb-10 max-w-2xl">
@@ -165,14 +175,14 @@ export default function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
-            className="mt-24 pt-12 border-t border-gray-100 flex flex-wrap justify-between items-center gap-12 opacity-80 transition-all"
+            className="mt-24 pt-12 border-t border-gray-100 flex overflow-x-auto md:flex-wrap md:justify-between items-center gap-12 opacity-80 transition-all pb-4 scrollbar-hide"
           >
-            <img src={shopifyLogo} alt="Shopify" className="h-8 w-auto" />
-            <img src={vtexLogo} alt="VTEX" className="h-8 w-auto" />
-            <img src={wooLogo} alt="WooCommerce" className="h-8 w-auto" />
-            <img src={jsLogo} alt="JavaScript" className="h-8 w-auto" />
-            <img src={nextLogo} alt="Next.js" className="h-12 w-auto" />
-            <img src={wpLogo} alt="WordPress" className="h-8 w-auto" />
+            <img src={shopifyLogo} alt="Shopify" className="h-8 w-auto flex-shrink-0" />
+            <img src={vtexLogo} alt="VTEX" className="h-8 w-auto flex-shrink-0" />
+            <img src={wooLogo} alt="WooCommerce" className="h-8 w-auto flex-shrink-0" />
+            <img src={jsLogo} alt="JavaScript" className="h-8 w-auto flex-shrink-0" />
+            <img src={nextLogo} alt="Next.js" className="h-12 w-auto flex-shrink-0" />
+            <img src={wpLogo} alt="WordPress" className="h-8 w-auto flex-shrink-0" />
           </motion.div>
         </div>
       </section>
@@ -339,9 +349,9 @@ export default function App() {
       <footer className="py-12 border-t border-gray-100 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-8 mb-8">
-            <div className="flex justify-center md:justify-start">
+            <button onClick={scrollToTop} className="flex justify-center md:justify-start cursor-pointer hover:opacity-80 transition-opacity">
               <Logo className="h-6 w-auto" />
-            </div>
+            </button>
             
             <div className="flex justify-center items-center gap-6">
               <a href="https://instagram.com/convertesites" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#14b8a6] transition-colors">
@@ -350,7 +360,7 @@ export default function App() {
               <a href="https://www.linkedin.com/company/convertesites/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#14b8a6] transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="https://api.whatsapp.com/send?phone=5548991775899&text=oi" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#14b8a6] transition-colors">
+              <a href={`https://api.whatsapp.com/send?phone=5548991775899&text=${encodeURIComponent(t.contact.whatsappMessage)}`} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#14b8a6] transition-colors">
                 <MessageCircle className="w-5 h-5" />
               </a>
             </div>
@@ -363,8 +373,8 @@ export default function App() {
             </div>
           </div>
           
-          <div className="pt-8 border-t border-gray-50 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-gray-400 text-xs">
+          <div className="pt-8 border-t border-gray-50 flex flex-col md:flex-row justify-center items-center gap-4">
+            <div className="text-gray-400 text-xs text-center">
               {t.footer.rights} • {t.footer.cnpj}
             </div>
           </div>

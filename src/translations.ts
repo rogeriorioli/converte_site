@@ -5,6 +5,7 @@ export const translations = {
     nav: {
       services: 'Services',
       about: 'Why Us',
+      agencies: 'Agencies',
       portfolio: 'Portfolio',
       contact: 'Start Project',
     },
@@ -53,6 +54,24 @@ export const translations = {
         },
       ],
     },
+    agencyPartner: {
+      title: 'Support & Evolution for Agencies',
+      subtitle: 'Scaling your agency\'s capacity shouldn\'t be a bottleneck. We act as your specialized development arm, delivering elite code to help you grow.',
+      points: [
+        {
+          title: 'White-Label Excellence',
+          desc: 'We work behind the scenes, following your standards and delivering high-quality results under your brand.',
+        },
+        {
+          title: 'Specialized Firepower',
+          desc: 'Get immediate access to senior experts in Shopify, VTEX, and React without the overhead of hiring.',
+        },
+        {
+          title: 'Ongoing Evolution',
+          desc: 'From bug fixes to major feature rollouts, we ensure your clients\' stores never stop evolving.',
+        },
+      ],
+    },
     footer: {
       rights: '© 2026 Converte Global. All rights reserved.',
       location: 'Based in Floripa - Brasil • Serving the World',
@@ -75,6 +94,7 @@ export const translations = {
     nav: {
       services: 'Serviços',
       about: 'Por que nós',
+      agencies: 'Agências',
       portfolio: 'Portfólio',
       contact: 'Começar Projeto',
     },
@@ -120,6 +140,24 @@ export const translations = {
         {
           title: 'Agilidade de Mercado',
           desc: 'Ciclos de desenvolvimento acelerados para ajudar você a se manter à frente da concorrência.',
+        },
+      ],
+    },
+    agencyPartner: {
+      title: 'Suporte e Evolução para Agências',
+      subtitle: 'Escalar a capacidade da sua agência não deve ser um gargalo. Atuamos como seu braço de desenvolvimento especializado, entregando código de elite.',
+      points: [
+        {
+          title: 'Excelência White-Label',
+          desc: 'Trabalhamos nos bastidores, seguindo seus padrões e entregando resultados de alta qualidade sob sua marca.',
+        },
+        {
+          title: 'Poder de Fogo Especializado',
+          desc: 'Tenha acesso imediato a especialistas seniores em Shopify, VTEX e React sem os custos de contratação.',
+        },
+        {
+          title: 'Evolução Contínua',
+          desc: 'De correções de bugs a lançamentos de grandes funcionalidades, garantimos que as lojas de seus clientes nunca parem de evoluir.',
         },
       ],
     },

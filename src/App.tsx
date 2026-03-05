@@ -20,7 +20,10 @@ import {
   ExternalLink,
   Instagram,
   Linkedin,
-  MessageCircle
+  MessageCircle,
+  Users,
+  ShieldCheck,
+  TrendingUp
 } from 'lucide-react';
 import { translations, Language } from './translations';
 import { Logo } from './components/Logo';
@@ -48,6 +51,22 @@ export default function App() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
   const t = translations[lang];
+  
+  const trackEvent = (eventName: string, params?: object) => {
+    if (typeof window !== 'undefined') {
+      // GA4
+      if ((window as any).gtag) {
+        (window as any).gtag('event', eventName, params);
+      }
+      // GTM
+      if ((window as any).dataLayer) {
+        (window as any).dataLayer.push({
+          event: eventName,
+          ...params
+        });
+      }
+    }
+  };
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -67,12 +86,15 @@ export default function App() {
       if (response.ok) {
         setStatus('success');
         setFormData({ name: '', email: '', phone: '', message: '' });
+        trackEvent('form_submission_success', { form_name: 'contact_form' });
       } else {
         setStatus('error');
+        trackEvent('form_submission_error', { form_name: 'contact_form' });
       }
     } catch (error) {
       console.error('Submit error:', error);
       setStatus('error');
+      trackEvent('form_submission_error', { form_name: 'contact_form', error: 'exception' });
     }
   };
 
@@ -82,14 +104,18 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleLang = () => setLang(prev => prev === 'en' ? 'pt' : 'en');
+  const toggleLang = () => {
+    const newLang = lang === 'en' ? 'pt' : 'en';
+    setLang(prev => prev === 'en' ? 'pt' : 'en');
+    trackEvent('toggle_language', { language: newLang });
+  };
 
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-teal-500/30">
       {/* Navbar */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 backdrop-blur-md border-b border-gray-200 py-4' : 'bg-transparent py-6'}`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-          <button onClick={scrollToTop} className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
+          <button onClick={() => { scrollToTop(); trackEvent('click_logo'); }} className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
             <Logo className="h-8 w-auto" />
           </button>
 
@@ -97,6 +123,7 @@ export default function App() {
           <div className="hidden md:flex items-center gap-8">
             <a href="#services" className="text-sm font-medium text-gray-600 hover:text-[#14b8a6] transition-colors">{t.nav.services}</a>
             <a href="#about" className="text-sm font-medium text-gray-600 hover:text-[#14b8a6] transition-colors">{t.nav.about}</a>
+            <a href="#agencies" className="text-sm font-medium text-gray-600 hover:text-[#14b8a6] transition-colors">{t.nav.agencies}</a>
             <a href="#contact" className="text-sm font-medium text-gray-600 hover:text-[#14b8a6] transition-colors">{t.nav.contact}</a>
             <button 
               onClick={toggleLang}
@@ -105,7 +132,7 @@ export default function App() {
               <Globe className="w-4 h-4 text-[#14b8a6]" />
               {lang.toUpperCase()}
             </button>
-            <a href="#contact" onClick={() => setIsMenuOpen(false)} className="bg-[#14b8a6] hover:bg-[#0d9488] text-white px-5 py-2 rounded-full text-sm font-bold transition-all transform hover:scale-105 inline-block text-center">
+            <a href="#contact" onClick={() => { setIsMenuOpen(false); trackEvent('click_cta_nav'); }} className="bg-[#14b8a6] hover:bg-[#0d9488] text-white px-5 py-2 rounded-full text-sm font-bold transition-all transform hover:scale-105 inline-block text-center">
               {t.nav.contact}
             </a>
           </div>
@@ -129,12 +156,13 @@ export default function App() {
             <div className="flex flex-col gap-6 text-2xl font-medium text-gray-900">
               <a href="#services" onClick={() => setIsMenuOpen(false)}>{t.nav.services}</a>
               <a href="#about" onClick={() => setIsMenuOpen(false)}>{t.nav.about}</a>
+              <a href="#agencies" onClick={() => setIsMenuOpen(false)}>{t.nav.agencies}</a>
               <a href="#contact" onClick={() => setIsMenuOpen(false)}>{t.nav.contact}</a>
               <button onClick={() => { toggleLang(); setIsMenuOpen(false); }} className="flex items-center gap-2 text-[#14b8a6]">
                 <Globe className="w-6 h-6" />
                 {lang === 'en' ? 'Português' : 'English'}
               </button>
-              <a href="#contact" onClick={() => setIsMenuOpen(false)} className="bg-[#14b8a6] text-white px-6 py-3 rounded-full text-center font-bold">
+              <a href="#contact" onClick={() => { setIsMenuOpen(false); trackEvent('click_cta_mobile_menu'); }} className="bg-[#14b8a6] text-white px-6 py-3 rounded-full text-center font-bold">
                 {t.nav.contact}
               </a>
             </div>
@@ -163,7 +191,7 @@ export default function App() {
               {t.hero.subtitle}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#contact" className="bg-[#14b8a6] hover:bg-[#0d9488] text-white px-8 py-4 rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2 group shadow-lg shadow-teal-500/20">
+              <a href="#contact" onClick={() => trackEvent('click_cta_hero')} className="bg-[#14b8a6] hover:bg-[#0d9488] text-white px-8 py-4 rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2 group shadow-lg shadow-teal-500/20">
                 {t.hero.cta}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
@@ -254,6 +282,60 @@ export default function App() {
         </div>
       </section>
 
+      {/* Agency & Consultancy Support Section */}
+      <section id="agencies" className="py-24 bg-gray-50 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="order-2 lg:order-1">
+              <div className="relative">
+                <div className="aspect-square rounded-3xl overflow-hidden border border-gray-100 bg-linear-to-br from-indigo-500/10 to-[#14b8a6]/10 p-1">
+                  <div className="w-full h-full bg-white rounded-[22px] flex flex-col items-center justify-center p-8 relative overflow-hidden">
+                    {/* Aesthetic element: Abstract illustration or icons */}
+                    <div className="grid grid-cols-2 gap-4 w-full h-full">
+                      <div className="bg-indigo-50 rounded-2xl flex items-center justify-center">
+                        <Users className="w-12 h-12 text-indigo-600" />
+                      </div>
+                      <div className="bg-teal-50 rounded-2xl flex items-center justify-center">
+                        <ShieldCheck className="w-12 h-12 text-[#14b8a6]" />
+                      </div>
+                      <div className="bg-blue-50 rounded-2xl flex items-center justify-center">
+                        <TrendingUp className="w-12 h-12 text-blue-600" />
+                      </div>
+                      <div className="bg-purple-50 rounded-2xl flex items-center justify-center">
+                        <Code2 className="w-12 h-12 text-purple-600" />
+                      </div>
+                    </div>
+                    <div className="absolute inset-0 bg-linear-to-t from-white/20 to-transparent pointer-events-none" />
+                  </div>
+                </div>
+                {/* Decorative blobs */}
+                <div className="absolute -top-10 -right-10 w-32 h-32 bg-indigo-500/10 blur-3xl rounded-full" />
+                <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-teal-500/10 blur-3xl rounded-full" />
+              </div>
+            </div>
+
+            <div className="order-1 lg:order-2">
+              <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900">{t.agencyPartner.title}</h2>
+              <p className="text-xl text-gray-600 mb-12">{t.agencyPartner.subtitle}</p>
+              
+              <div className="space-y-8">
+                {t.agencyPartner.points.map((point, idx) => (
+                  <div key={idx} className="flex gap-4">
+                    <div className="shrink-0 w-12 h-12 rounded-2xl bg-[#14b8a6]/10 border border-[#14b8a6]/20 flex items-center justify-center">
+                      {idx === 0 ? <ShieldCheck className="w-6 h-6 text-[#14b8a6]" /> : idx === 1 ? <Users className="w-6 h-6 text-[#14b8a6]" /> : <TrendingUp className="w-6 h-6 text-[#14b8a6]" />}
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold mb-1 text-gray-900">{point.title}</h4>
+                      <p className="text-gray-600">{point.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Portfolio CTA Section */}
       <section id="portfolio" className="py-24 bg-[#14b8a6]">
         <div className="max-w-7xl mx-auto px-6 text-center">
@@ -265,7 +347,7 @@ export default function App() {
               ? 'From NY startups to global operations in Brazil, we deliver clean code and elite performance in Shopify, React, and VTEX. Ready to build?' 
               : 'De startups em NY a operações globais no Brasil, entregamos código limpo e performance de elite em Shopify, React e VTEX. Vamos tirar sua ideia do papel?'}
           </p>
-          <a href="#contact" className="bg-white text-[#14b8a6] px-10 py-5 rounded-full font-bold text-xl hover:scale-105 transition-transform shadow-2xl inline-block">
+          <a href="#contact" onClick={() => trackEvent('click_cta_portfolio')} className="bg-white text-[#14b8a6] px-10 py-5 rounded-full font-bold text-xl hover:scale-105 transition-transform shadow-2xl inline-block">
             {t.hero.cta}
           </a>
         </div>
@@ -349,18 +431,18 @@ export default function App() {
       <footer className="py-12 border-t border-gray-100 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-8 mb-8">
-            <button onClick={scrollToTop} className="flex justify-center md:justify-start cursor-pointer hover:opacity-80 transition-opacity">
+            <button onClick={() => { scrollToTop(); trackEvent('click_logo_footer'); }} className="flex justify-center md:justify-start cursor-pointer hover:opacity-80 transition-opacity">
               <Logo className="h-6 w-auto" />
             </button>
             
             <div className="flex justify-center items-center gap-6">
-              <a href="https://instagram.com/convertesites" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#14b8a6] transition-colors">
+              <a href="https://instagram.com/convertesites" onClick={() => trackEvent('click_social', { platform: 'instagram' })} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#14b8a6] transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="https://www.linkedin.com/company/convertesites/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#14b8a6] transition-colors">
+              <a href="https://www.linkedin.com/company/convertesites/" onClick={() => trackEvent('click_social', { platform: 'linkedin' })} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#14b8a6] transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href={`https://api.whatsapp.com/send?phone=5548991775899&text=${encodeURIComponent(t.contact.whatsappMessage)}`} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#14b8a6] transition-colors">
+              <a href={`https://api.whatsapp.com/send?phone=5548991775899&text=${encodeURIComponent(t.contact.whatsappMessage)}`} onClick={() => trackEvent('click_social', { platform: 'whatsapp' })} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#14b8a6] transition-colors">
                 <MessageCircle className="w-5 h-5" />
               </a>
             </div>

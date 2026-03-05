@@ -8,6 +8,7 @@ export const translations = {
       agencies: 'Agencies',
       portfolio: 'Portfolio',
       contact: 'Start Project',
+      flow: 'Flow',
     },
     hero: {
       badge: 'Global Development Agency',
@@ -87,7 +88,7 @@ export const translations = {
       success: 'Message sent successfully! We will contact you soon.',
       error: 'Something went wrong. Please try again.',
       loading: 'Sending...',
-      whatsappMessage: 'Hi! I would like more information about your services.'
+      whatsappMessage: 'Hi! I would like more information about your services.',
     }
   },
   pt: {
@@ -97,6 +98,7 @@ export const translations = {
       agencies: 'Agências',
       portfolio: 'Portfólio',
       contact: 'Começar Projeto',
+      flow: 'Flow',
     },
     hero: {
       badge: 'Agência de Desenvolvimento Global',

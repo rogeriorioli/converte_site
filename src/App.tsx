@@ -125,6 +125,7 @@ export default function App() {
             <a href="#about" className="text-sm font-medium text-gray-600 hover:text-[#14b8a6] transition-colors">{t.nav.about}</a>
             <a href="#agencies" className="text-sm font-medium text-gray-600 hover:text-[#14b8a6] transition-colors">{t.nav.agencies}</a>
             <a href="#contact" className="text-sm font-medium text-gray-600 hover:text-[#14b8a6] transition-colors">{t.nav.contact}</a>
+            <a href="https://flow.convertesites.com.br/" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click_nav_flow')} className="text-sm font-medium text-gray-600 hover:text-[#14b8a6] transition-colors">{t.nav.flow}</a>  
             <button 
               onClick={toggleLang}
               className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-200 hover:border-[#14b8a6]/50 transition-all text-sm font-medium text-gray-700"
@@ -158,6 +159,7 @@ export default function App() {
               <a href="#about" onClick={() => setIsMenuOpen(false)}>{t.nav.about}</a>
               <a href="#agencies" onClick={() => setIsMenuOpen(false)}>{t.nav.agencies}</a>
               <a href="#contact" onClick={() => setIsMenuOpen(false)}>{t.nav.contact}</a>
+              <a href="https://flow.convertesites.com.br/" target="_blank" rel="noopener noreferrer" onClick={() => { setIsMenuOpen(false); trackEvent('click_nav_flow_mobile'); }}>{t.nav.flow}</a>
               <button onClick={() => { toggleLang(); setIsMenuOpen(false); }} className="flex items-center gap-2 text-[#14b8a6]">
                 <Globe className="w-6 h-6" />
                 {lang === 'en' ? 'Português' : 'English'}

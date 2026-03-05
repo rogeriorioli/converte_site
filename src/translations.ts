@@ -10,6 +10,10 @@ export const translations = {
       contact: 'Start Project',
       flow: 'Flow',
     },
+    metadata: {
+      title: 'Converte - High-End Digital Engineering. Global Scale',
+      description: 'We build high-performance e-commerce and scalable web applications using Shopify, VTEX, React, and WordPress. Senior-level expertise delivered with the cost-efficiency of a global partner',
+    },
     hero: {
       badge: 'Global Development Agency',
       title: 'High-End Digital Engineering. Global Scale.',
@@ -99,6 +103,10 @@ export const translations = {
       portfolio: 'Portfólio',
       contact: 'Começar Projeto',
       flow: 'Flow',
+    },
+    metadata: {
+      title: 'Converte - Desenvolvimento Web de Elite para Marcas Globais',
+      description: 'Desenvolvemos e-commerces de alta performance e aplicações web escaláveis usando Shopify, VTEX, React e WordPress. Especialistas seniores com custo-benefício global',
     },
     hero: {
       badge: 'Agência de Desenvolvimento Global',

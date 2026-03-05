@@ -104,6 +104,26 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    document.title = t.metadata.title;
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', t.metadata.description);
+    }
+    // Update OG and Twitter tags as well
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', t.metadata.title);
+    
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) ogDescription.setAttribute('content', t.metadata.description);
+
+    const twitterTitle = document.querySelector('meta[property="twitter:title"]');
+    if (twitterTitle) twitterTitle.setAttribute('content', t.metadata.title);
+
+    const twitterDescription = document.querySelector('meta[property="twitter:description"]');
+    if (twitterDescription) twitterDescription.setAttribute('content', t.metadata.description);
+  }, [lang, t]);
+
   const toggleLang = () => {
     const newLang = lang === 'en' ? 'pt' : 'en';
     setLang(prev => prev === 'en' ? 'pt' : 'en');

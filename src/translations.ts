@@ -75,6 +75,20 @@ export const translations = {
           title: 'Ongoing Evolution',
           desc: 'From bug fixes to major feature rollouts, we ensure your clients\' stores never stop evolving.',
         },
+        {
+          title: 'AI as a Process Differentiator',
+          desc: 'Our workflow is "AI-Augmented". We combine our engineers\' expertise with advanced AI models to accelerate development, ensuring technical excellence and faster deliveries (Market Agility) than traditional agencies.',
+        },
+      ],
+    },
+    aiAugmented: {
+      title: 'AI-Augmented Engineering',
+      subtitle: 'Coding at the speed of thought.',
+      description: 'We don\'t just write code. We enhance our entire development lifecycle with advanced AI models. This allows for rapid prototyping, deeply automated code reviews, instantaneous refactoring, and comprehensive test generation. The result? Uncompromised elite quality delivered in a fraction of traditional timelines.',
+      metrics: [
+        { label: 'Faster Delivery', value: '40%' },
+        { label: 'Test Coverage', value: '95%+' },
+        { label: 'Code Quality', value: 'Elite' },
       ],
     },
     footer: {
@@ -169,6 +183,20 @@ export const translations = {
           title: 'Evolução Contínua',
           desc: 'De correções de bugs a lançamentos de grandes funcionalidades, garantimos que as lojas de seus clientes nunca parem de evoluir.',
         },
+        {
+          title: 'IA como Diferencial de Processo',
+          desc: 'Nosso fluxo de trabalho é "AI-Augmented". Aliamos a expertise de nossos engenheiros a modelos avançados de IA para acelerar o desenvolvimento, garantindo excelência técnica e entregas mais rápidas (Market Agility) que concorrentes tradicionais.',
+        },
+      ],
+    },
+    aiAugmented: {
+      title: 'Engenharia AI-Augmented',
+      subtitle: 'Programação na velocidade do pensamento.',
+      description: 'Nós não apenas escrevemos código. Potencializamos todo o nosso ciclo de desenvolvimento com modelos avançados de IA. Isso resulta em protótipos incrivelmente rápidos, code reviews minuciosos automatizados e geração impecável de testes. O resultado? Qualidade de elite inquestionável, entregue em uma fração do tempo tradicional.',
+      metrics: [
+        { label: 'Entregas Mais Rápidas', value: '40%' },
+        { label: 'Cobertura de Testes', value: '95%+' },
+        { label: 'Qualidade do Código', value: 'Elite' },
       ],
     },
     footer: {

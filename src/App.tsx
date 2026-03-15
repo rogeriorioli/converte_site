@@ -23,7 +23,8 @@ import {
   MessageCircle,
   Users,
   ShieldCheck,
-  TrendingUp
+  TrendingUp,
+  Bot
 } from 'lucide-react';
 import { translations, Language } from './translations';
 import { Logo } from './components/Logo';
@@ -35,6 +36,10 @@ import jsLogo from '../assets/Java-Script--Streamline-Unicons.svg';
 import nextLogo from '../assets/Nextjs--Streamline-Svg-Logos.svg';
 import wpLogo from '../assets/WordPress_blue_logo.svg.png';
 import hubImage from '../assets/Gemini_Generated_Image_jb4uwajb4uwajb4u.png';
+import teamPhoto from '../assets/team_working_florianopolis.png';
+import informalProgrammerPhoto from '../assets/nearshore_developer_floripa.png';
+import automationPhoto from '../assets/ai_automation_pipeline.png';
+import aiAugmentedPhoto from '../assets/ai_augmented_floripa.png';
 
 export default function App() {
   const [lang, setLang] = useState<Language>(() => {
@@ -290,11 +295,11 @@ export default function App() {
             </div>
 
             <div className="relative">
-              <div className="aspect-square rounded-3xl overflow-hidden border border-gray-100 bg-gradient-to-br from-[#14b8a6]/10 to-blue-500/10 p-1">
+              <div className="aspect-square rounded-3xl overflow-hidden border border-gray-100 bg-linear-to-br from-[#14b8a6]/10 to-blue-500/10 p-1">
                 <div className="w-full h-full bg-gray-50 rounded-[22px] flex items-center justify-center relative overflow-hidden">
                   <img 
-                    src={hubImage} 
-                    alt="Converte Global Hub" 
+                    src={informalProgrammerPhoto} 
+                    alt="Converte Nearshore Talent Florianópolis" 
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -311,23 +316,12 @@ export default function App() {
             <div className="order-2 lg:order-1">
               <div className="relative">
                 <div className="aspect-square rounded-3xl overflow-hidden border border-gray-100 bg-linear-to-br from-indigo-500/10 to-[#14b8a6]/10 p-1">
-                  <div className="w-full h-full bg-white rounded-[22px] flex flex-col items-center justify-center p-8 relative overflow-hidden">
-                    {/* Aesthetic element: Abstract illustration or icons */}
-                    <div className="grid grid-cols-2 gap-4 w-full h-full">
-                      <div className="bg-indigo-50 rounded-2xl flex items-center justify-center">
-                        <Users className="w-12 h-12 text-indigo-600" />
-                      </div>
-                      <div className="bg-teal-50 rounded-2xl flex items-center justify-center">
-                        <ShieldCheck className="w-12 h-12 text-[#14b8a6]" />
-                      </div>
-                      <div className="bg-blue-50 rounded-2xl flex items-center justify-center">
-                        <TrendingUp className="w-12 h-12 text-blue-600" />
-                      </div>
-                      <div className="bg-purple-50 rounded-2xl flex items-center justify-center">
-                        <Code2 className="w-12 h-12 text-purple-600" />
-                      </div>
-                    </div>
-                    <div className="absolute inset-0 bg-linear-to-t from-white/20 to-transparent pointer-events-none" />
+                  <div className="w-full h-full bg-gray-50 rounded-[22px] flex items-center justify-center relative overflow-hidden">
+                    <img 
+                      src={teamPhoto} 
+                      alt="Converte Engineering Team Florianópolis" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
                 {/* Decorative blobs */}
@@ -344,7 +338,7 @@ export default function App() {
                 {t.agencyPartner.points.map((point, idx) => (
                   <div key={idx} className="flex gap-4">
                     <div className="shrink-0 w-12 h-12 rounded-2xl bg-[#14b8a6]/10 border border-[#14b8a6]/20 flex items-center justify-center">
-                      {idx === 0 ? <ShieldCheck className="w-6 h-6 text-[#14b8a6]" /> : idx === 1 ? <Users className="w-6 h-6 text-[#14b8a6]" /> : <TrendingUp className="w-6 h-6 text-[#14b8a6]" />}
+                      {idx === 0 ? <ShieldCheck className="w-6 h-6 text-[#14b8a6]" /> : idx === 1 ? <Users className="w-6 h-6 text-[#14b8a6]" /> : idx === 2 ? <TrendingUp className="w-6 h-6 text-[#14b8a6]" /> : <Bot className="w-6 h-6 text-[#14b8a6]" />}
                     </div>
                     <div>
                       <h4 className="text-lg font-bold mb-1 text-gray-900">{point.title}</h4>
@@ -352,6 +346,49 @@ export default function App() {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AI Augmented Section */}
+      <section id="ai-augmented" className="py-24 bg-white overflow-hidden relative">
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#14b8a6]/5 blur-[150px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-500/5 blur-[150px] rounded-full pointer-events-none" />
+        
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight! text-gray-900">{t.aiAugmented.title}</h2>
+              <p className="text-xl text-gray-600 mb-12 leading-relaxed">
+                {t.aiAugmented.description}
+              </p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                {t.aiAugmented.metrics.map((metric, idx) => (
+                  <div key={idx} className="p-6 rounded-2xl bg-gray-50 border border-gray-100">
+                    <div className="text-3xl font-bold bg-linear-to-r from-[#14b8a6] to-purple-500 bg-clip-text text-transparent mb-2">
+                      {metric.value}
+                    </div>
+                    <div className="text-sm font-medium text-gray-500">
+                      {metric.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="aspect-square rounded-[40px] overflow-hidden border border-gray-100 bg-linear-to-br from-[#14b8a6]/10 to-purple-500/10 p-1">
+                <div className="w-full h-full bg-white rounded-[38px] flex items-center justify-center relative overflow-hidden">
+                  <img 
+                    src={aiAugmentedPhoto} 
+                    alt="Software engineer using AI coding assistant with Florianópolis in background" 
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-gray-900/40 via-transparent to-transparent pointer-events-none"></div>
+                </div>
               </div>
             </div>
           </div>

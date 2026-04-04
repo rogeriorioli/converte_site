@@ -29,7 +29,7 @@ export const translations = {
         desc: 'E-commerce without borders. We help local brands sell globally with Shopify Markets and custom themes.',
       },
       vtex: {
-        title: 'VTEX Enterprise',
+        title: 'VTEX Experts',
         desc: 'Scalable solutions for large-scale operations. We specialize in VTEX IO and complex commerce architectures.',
       },
       react: {
@@ -137,7 +137,7 @@ export const translations = {
         desc: 'E-commerce sem fronteiras. Ajudamos marcas a venderem globalmente com Shopify Markets e temas customizados.',
       },
       vtex: {
-        title: 'VTEX Enterprise',
+        title: 'Especialistas VTEX',
         desc: 'Soluções escaláveis para operações de grande porte. Especialistas em VTEX IO e arquiteturas de comércio complexas.',
       },
       react: {

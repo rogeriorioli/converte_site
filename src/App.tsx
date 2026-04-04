@@ -41,6 +41,15 @@ import informalProgrammerPhoto from '../assets/nearshore_developer_floripa.png';
 import automationPhoto from '../assets/ai_automation_pipeline.png';
 import aiAugmentedPhoto from '../assets/ai_augmented_floripa.png';
 
+// Client Logos
+import flycompLogo from '../assets/clientes/flycomp_logo.png';
+import freakLogo from '../assets/clientes/freak_logo.webp';
+import ibidLogo from '../assets/clientes/ibid_logo.webp';
+import ilhaLogo from '../assets/clientes/ilha_logo.webp';
+import institutoLogo from '../assets/clientes/instituto_logo.png';
+import oneillLogo from '../assets/clientes/oneill_logo.svg';
+import tagLogo from '../assets/clientes/tag_logo.jpg';
+
 export default function App() {
   const [lang, setLang] = useState<Language>(() => {
     if (typeof window !== 'undefined') {
@@ -56,6 +65,16 @@ export default function App() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
   const t = translations[lang];
+
+  const clientLogos = [
+    { src: flycompLogo, alt: 'Flycomp' },
+    { src: freakLogo, alt: 'Hyperfreak' },
+    { src: ibidLogo, alt: 'Ibid' },
+    { src: ilhaLogo, alt: 'Ilha' },
+    { src: institutoLogo, alt: 'Instituto' },
+    { src: oneillLogo, alt: 'O\'Neill' },
+    { src: tagLogo, alt: 'Tag' },
+  ].sort((a, b) => a.alt.localeCompare(b.alt));
   
   const trackEvent = (eventName: string, params?: object) => {
     if (typeof window !== 'undefined') {
@@ -110,23 +129,101 @@ export default function App() {
   }, []);
 
   useEffect(() => {
+    // Basic Metadata
     document.title = t.metadata.title;
+    document.documentElement.lang = lang;
+
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', t.metadata.description);
     }
-    // Update OG and Twitter tags as well
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) ogTitle.setAttribute('content', t.metadata.title);
-    
-    const ogDescription = document.querySelector('meta[property="og:description"]');
-    if (ogDescription) ogDescription.setAttribute('content', t.metadata.description);
 
-    const twitterTitle = document.querySelector('meta[property="twitter:title"]');
-    if (twitterTitle) twitterTitle.setAttribute('content', t.metadata.title);
+    // Canonical link
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', window.location.origin + (lang === 'pt' ? '/?lang=pt' : ''));
 
-    const twitterDescription = document.querySelector('meta[property="twitter:description"]');
-    if (twitterDescription) twitterDescription.setAttribute('content', t.metadata.description);
+    // Update OG and Twitter tags
+    const updateMeta = (selector: string, content: string) => {
+      const el = document.querySelector(selector);
+      if (el) el.setAttribute('content', content);
+    };
+
+    updateMeta('meta[property="og:title"]', t.metadata.title);
+    updateMeta('meta[property="og:description"]', t.metadata.description);
+    updateMeta('meta[property="twitter:title"]', t.metadata.title);
+    updateMeta('meta[property="twitter:description"]', t.metadata.description);
+
+    // Schema.org (JSON-LD)
+    const schemaData = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.convertesites.com.br/#organization",
+          "name": "Converte",
+          "url": "https://www.convertesites.com.br/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.convertesites.com.br/favicon.svg"
+          },
+          "sameAs": [
+            "https://instagram.com/convertesites",
+            "https://www.linkedin.com/company/convertesites/"
+          ]
+        },
+        {
+          "@type": "ProfessionalService",
+          "name": "Converte - Digital Engineering",
+          "image": "https://www.convertesites.com.br/assets/Gemini_Generated_Image_jb4uwajb4uwajb4u-ApP3hCxb.png",
+          "@id": "https://www.convertesites.com.br/#service",
+          "url": "https://www.convertesites.com.br/",
+          "telephone": "+5548991775899",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Florianópolis",
+            "addressRegion": "SC",
+            "addressCountry": "BR"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Shopify Development",
+          "description": t.services.shopify.desc,
+          "provider": { "@id": "https://www.convertesites.com.br/#organization" }
+        },
+        {
+          "@type": "Service",
+          "name": "VTEX Development",
+          "description": t.services.vtex.desc,
+          "provider": { "@id": "https://www.convertesites.com.br/#organization" }
+        },
+        {
+          "@type": "Service",
+          "name": "React Web Applications",
+          "description": t.services.react.desc,
+          "provider": { "@id": "https://www.convertesites.com.br/#organization" }
+        }
+      ]
+    };
+
+    let script = document.getElementById('json-ld-schema') as HTMLScriptElement;
+    if (!script) {
+      script = document.createElement('script');
+      script.id = 'json-ld-schema';
+      script.type = 'application/ld+json';
+      document.head.appendChild(script);
+    }
+    script.text = JSON.stringify(schemaData);
+
+    return () => {
+      // Optional: Cleanup on unmount or lang change if needed.
+    };
   }, [lang, t]);
 
   const toggleLang = () => {
@@ -140,7 +237,11 @@ export default function App() {
       {/* Navbar */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 backdrop-blur-md border-b border-gray-200 py-4' : 'bg-transparent py-6'}`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-          <button onClick={() => { scrollToTop(); trackEvent('click_logo'); }} className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
+          <button 
+            onClick={() => { scrollToTop(); trackEvent('click_logo'); }} 
+            className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity"
+            aria-label="Converte Home"
+          >
             <Logo className="h-8 w-auto" />
           </button>
 
@@ -154,6 +255,7 @@ export default function App() {
             <button 
               onClick={toggleLang}
               className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-200 hover:border-[#14b8a6]/50 transition-all text-sm font-medium text-gray-700"
+              aria-label={lang === 'en' ? 'Switch to Portuguese' : 'Mudar para Inglês'}
             >
               <Globe className="w-4 h-4 text-[#14b8a6]" />
               {lang.toUpperCase()}
@@ -164,7 +266,11 @@ export default function App() {
           </div>
 
           {/* Mobile Toggle */}
-          <button className="md:hidden text-gray-900" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <button 
+            className="md:hidden text-gray-900" 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          >
             {isMenuOpen ? <X /> : <Menu />}
           </button>
         </div>
@@ -230,14 +336,14 @@ export default function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
-            className="mt-24 pt-12 border-t border-gray-100 flex overflow-x-auto md:flex-wrap md:justify-between items-center gap-12 opacity-80 transition-all pb-4 scrollbar-hide"
+            className="mt-24 pt-12 border-t border-gray-100 flex overflow-x-auto md:flex-wrap md:justify-between items-center gap-12 transition-all pb-4 scrollbar-hide"
           >
-            <img src={shopifyLogo} alt="Shopify" className="h-8 w-auto flex-shrink-0" />
-            <img src={vtexLogo} alt="VTEX" className="h-8 w-auto flex-shrink-0" />
-            <img src={wooLogo} alt="WooCommerce" className="h-8 w-auto flex-shrink-0" />
-            <img src={jsLogo} alt="JavaScript" className="h-8 w-auto flex-shrink-0" />
-            <img src={nextLogo} alt="Next.js" className="h-12 w-auto flex-shrink-0" />
-            <img src={wpLogo} alt="WordPress" className="h-8 w-auto flex-shrink-0" />
+            <img src={shopifyLogo} alt="Shopify" className="h-8 w-auto shrink-0" />
+            <img src={vtexLogo} alt="VTEX" className="h-8 w-auto shrink-0" />
+            <img src={wooLogo} alt="WooCommerce" className="h-8 w-auto shrink-0" />
+            <img src={jsLogo} alt="JavaScript" className="h-8 w-auto shrink-0" />
+            <img src={nextLogo} alt="Next.js" className="h-10 w-auto shrink-0" />
+            <img src={wpLogo} alt="WordPress" className="h-8 w-auto shrink-0" />
           </motion.div>
         </div>
       </section>
@@ -411,6 +517,28 @@ export default function App() {
           </a>
         </div>
       </section>
+      <section className="py-24 px-4 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto"> 
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900 text-center">
+            {lang === 'en' ? 'Our Clients' : 'Nossos Clientes'}
+          </h2>
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8 }}
+            className=" pt-12  flex overflow-x-auto md:flex-wrap md:justify-between items-center gap-12 opacity-80 transition-all pb-4 scrollbar-hide"
+          >
+            {clientLogos.map((logo, idx) => (
+              <img 
+                key={idx} 
+                src={logo.src} 
+                alt={logo.alt} 
+                className="h-8 md:h-10 w-auto shrink-0 transition-all duration-500" 
+              />
+            ))}
+          </motion.div>
+        </div>
+      </section>
       {/* Contact Section */}
       <section id="contact" className="py-24 bg-white">
         <div className="max-w-3xl mx-auto px-6">
@@ -507,10 +635,12 @@ export default function App() {
             </div>
 
             <div className="flex flex-col items-center md:items-end gap-1 text-gray-400 text-sm">
-              <div className="flex items-center gap-2">
-                <Globe className="w-4 h-4" />
-                {t.footer.location}
-              </div>
+              <address className="not-italic">
+                <div className="flex items-center gap-2">
+                  <Globe className="w-4 h-4" />
+                  {t.footer.location}
+                </div>
+              </address>
             </div>
           </div>
           

@@ -1,0 +1,15 @@
+# Converte - High-End Digital Engineering
+
+> High-performance e-commerce and scalable web applications using Shopify, VTEX, React, and WordPress. Senior-level expertise delivered with the cost-efficiency of a global partner.
+
+## Summary
+Converte is a digital engineering partner specializing in building high-performance e-commerce and scalable web applications. They leverage modern technologies like Shopify, VTEX, React, and WordPress to deliver global-scale solutions.
+
+## Core Expertise
+- **E-commerce**: Specialized in Shopify and VTEX platforms.
+- **Web Applications**: Scalable React-based frontend development.
+- **CMS**: Professional WordPress implementations.
+- **Engineering**: High-end digital engineering with a focus on performance and scalability.
+
+## Contact & Links
+- Website: [https://www.convertesites.com.br/](https://www.convertesites.com.br/)

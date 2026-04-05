@@ -46,7 +46,7 @@ import flycompLogo from '../assets/clientes/flycomp_logo.png';
 import freakLogo from '../assets/clientes/freak_logo.webp';
 import ibidLogo from '../assets/clientes/ibid_logo.webp';
 import ilhaLogo from '../assets/clientes/ilha_logo.webp';
-import institutoLogo from '../assets/clientes/instituto_logo.png';
+import institutoLogo from '../assets/clientes/instituto_logo.jpg';
 import oneillLogo from '../assets/clientes/oneill_logo.svg';
 import tagLogo from '../assets/clientes/tag_logo.jpg';
 
@@ -71,7 +71,7 @@ export default function App() {
     { src: freakLogo, alt: 'Hyperfreak' },
     { src: ibidLogo, alt: 'Ibid' },
     { src: ilhaLogo, alt: 'Ilha' },
-    { src: institutoLogo, alt: 'Instituto' },
+    { src: institutoLogo, alt: 'Instituto', className: 'rounded-md' },
     { src: oneillLogo, alt: 'O\'Neill' },
     { src: tagLogo, alt: 'Tag' },
   ].sort((a, b) => a.alt.localeCompare(b.alt));
@@ -533,7 +533,7 @@ export default function App() {
                 key={idx} 
                 src={logo.src} 
                 alt={logo.alt} 
-                className="h-8 md:h-10 w-auto shrink-0 transition-all duration-500" 
+                className={`${logo.className} h-8 md:h-10 w-auto shrink-0 transition-all duration-500`} 
               />
             ))}
           </motion.div>

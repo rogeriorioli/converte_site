@@ -49,6 +49,8 @@ import ilhaLogo from '../assets/clientes/ilha_logo.webp';
 import institutoLogo from '../assets/clientes/instituto_logo.jpg';
 import oneillLogo from '../assets/clientes/oneill_logo.svg';
 import tagLogo from '../assets/clientes/tag_logo.jpg';
+import floripaRealtorLogo from '../assets/clientes/florianopolis-realtor-logo.png';
+
 
 export default function App() {
   const [lang, setLang] = useState<Language>(() => {
@@ -74,6 +76,7 @@ export default function App() {
     { src: institutoLogo, alt: 'Instituto', className: 'rounded-md' },
     { src: oneillLogo, alt: 'O\'Neill' },
     { src: tagLogo, alt: 'Tag' },
+    { src: floripaRealtorLogo, alt: 'Florianópolis Realtor' },
   ].sort((a, b) => a.alt.localeCompare(b.alt));
   
   const trackEvent = (eventName: string, params?: object) => {
@@ -519,24 +522,33 @@ export default function App() {
       </section>
       <section className="py-24 px-4 relative overflow-hidden">
         <div className="max-w-7xl mx-auto"> 
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900 text-center">
+          <h2 className="text-3xl md:text-5xl font-bold mb-12 text-gray-900 text-center">
             {lang === 'en' ? 'Our Clients' : 'Nossos Clientes'}
           </h2>
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.8 }}
-            className=" pt-12  flex overflow-x-auto md:flex-wrap md:justify-between items-center gap-12 opacity-80 transition-all pb-4 scrollbar-hide"
-          >
-            {clientLogos.map((logo, idx) => (
-              <img 
-                key={idx} 
-                src={logo.src} 
-                alt={logo.alt} 
-                className={`${logo.className} h-8 md:h-10 w-auto shrink-0 transition-all duration-500`} 
-              />
-            ))}
-          </motion.div>
+          
+          <div className="relative overflow-hidden mask-[linear-gradient(to_right,transparent,white_15%,white_85%,transparent)]">
+            <motion.div 
+              animate={{ 
+                x: clientLogos.length > 5 ? ["0%", "-50%"] : "0%" 
+              }}
+              transition={{ 
+                duration: 30,
+                ease: "linear",
+                repeat: Infinity,
+              }}
+              className="flex items-center gap-16 md:gap-32 whitespace-nowrap w-max"
+            >
+              {(clientLogos.length > 5 ? [...clientLogos, ...clientLogos] : clientLogos).map((logo, idx) => (
+                <div key={idx} className="flex items-center justify-center shrink-0">
+                  <img 
+                    src={logo.src} 
+                    alt={logo.alt} 
+                    className={`${logo.className} h-10 md:h-16 w-auto opacity-70 hover:opacity-100 transition-all duration-500 grayscale hover:grayscale-0`} 
+                  />
+                </div>
+              ))}
+            </motion.div>
+          </div>
         </div>
       </section>
       {/* Contact Section */}

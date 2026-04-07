@@ -11,75 +11,45 @@ export const translations = {
       flow: 'Flow',
     },
     metadata: {
-      title: 'Converte - High-End Digital Engineering. Global Scale',
-      description: 'We build high-performance e-commerce and scalable web applications using Shopify, VTEX, React, and WordPress. Senior-level expertise delivered with the cost-efficiency of a global partner',
+      title: 'Converte - The Senior Technical Arm for Your Agency',
+      description: 'Senior digital engineering for Shopify, VTEX, and React. We solve technical bottlenecks and deliver white-label evolution to keep your clients growing.',
     },
     hero: {
-      badge: 'Global Development Agency',
-      title: 'High-End Digital Engineering. Global Scale.',
-      subtitle: 'We build high-performance e-commerce and scalable web applications using Shopify, VTEX, React, and WordPress. Senior-level expertise delivered with the cost-efficiency of a global partner.',
-      cta: 'Start Your Project',
-      secondaryCta: 'View Portfolio',
+      badge: 'B2B Engineering Partner',
+      title: 'We are the technical arm your agency needs to unlock projects.',
+      subtitle: 'High-performance engineering for Shopify, VTEX, and React. We resolve technical bottlenecks, checkout bugs, and deliver white-label continuous evolution so your clients never stop selling.',
+      cta: 'Talk on WhatsApp',
+      secondaryCta: 'Schedule a Coffee',
+    },
+    socialProof: {
+      title: 'Enterprise-level standards, focused on your operation.',
+      text: 'The same technical rigor applied to projects for O\'Neill Brasil, McDonald\'s, Seara, Stanley, and Whirlpool, now available to scale your agency\'s deliveries without inflating your payroll.',
     },
     services: {
-      title: 'Our Expertise',
-      subtitle: 'Modern stacks for modern businesses.',
-      shopify: {
-        title: 'Shopify Experts',
-        desc: 'E-commerce without borders. We help local brands sell globally with Shopify Markets and custom themes.',
-      },
-      vtex: {
-        title: 'VTEX Experts',
-        desc: 'Scalable solutions for large-scale operations. We specialize in VTEX IO and complex commerce architectures.',
-      },
-      react: {
-        title: 'React & SaaS',
-        desc: 'Scalable front-end solutions. We build complex dashboards and high-performance web applications.',
-      },
-      wordpress: {
-        title: 'Performance WP',
-        desc: 'Beyond the basics. Optimized sites with Headless WP or ACF for maximum SEO and speed.',
-      },
+      title: 'Stop losing sleep over complex integrations and bugs.',
+      subtitle: 'We act as your specialized technical partner.',
+      topics: [
+        {
+          title: 'VTEX & Shopify Specialist',
+          desc: 'From complex architectures (VTEX IO) to global Shopify stores (Shopify Markets). We master the core platforms to deliver conversion and stability.',
+        },
+        {
+          title: 'White-Label Agency Ops',
+          desc: 'We work behind the scenes of your agency. We deliver clean, elite code using your brand. Your client stays happy, and you get the credit.',
+        },
+        {
+          title: 'AI-Accelerated Development',
+          desc: 'We don\'t just write code, we optimize it. Our workflow uses advanced AI models for refactoring and testing. The result? Senior-level delivery in a fraction of traditional market time.',
+        },
+        {
+          title: 'Direct Communication',
+          desc: 'Fast responses and real-time alignment. We work as an extension of your team, just a Slack or WhatsApp message away.',
+        }
+      ],
     },
     about: {
-      title: 'Why Nearshore with Converte?',
-      subtitle: 'Smart scaling for modern brands.',
-      points: [
-        {
-          title: 'Synched Workflows',
-          desc: 'Same-day responses and real-time meetings. We are just a Slack message away.',
-        },
-        {
-          title: 'High-End Output',
-          desc: 'Professional-grade engineering that follows global best practices and clean code standards.',
-        },
-        {
-          title: 'Market Agility',
-          desc: 'Fast-tracked development cycles to help you stay ahead of the competition.',
-        },
-      ],
-    },
-    agencyPartner: {
-      title: 'Support & Evolution for Agencies',
-      subtitle: 'Scaling your agency\'s capacity shouldn\'t be a bottleneck. We act as your specialized development arm, delivering elite code to help you grow.',
-      points: [
-        {
-          title: 'White-Label Excellence',
-          desc: 'We work behind the scenes, following your standards and delivering high-quality results under your brand.',
-        },
-        {
-          title: 'Specialized Firepower',
-          desc: 'Get immediate access to senior experts in Shopify, VTEX, and React without the overhead of hiring.',
-        },
-        {
-          title: 'Ongoing Evolution',
-          desc: 'From bug fixes to major feature rollouts, we ensure your clients\' stores never stop evolving.',
-        },
-        {
-          title: 'AI as a Process Differentiator',
-          desc: 'Our workflow is "AI-Augmented". We combine our engineers\' expertise with advanced AI models to accelerate development, ensuring technical excellence and faster deliveries (Market Agility) than traditional agencies.',
-        },
-      ],
+      title: 'From Silicon Island to Brazil\'s largest operations.',
+      subtitle: 'Located in Florianópolis, Converte acts as a boutique digital engineering studio. Unlike large software factories where your project is just another number, here you have direct access to senior developers focused on solving your client\'s problem definitively and profitably.',
     },
     aiAugmented: {
       title: 'AI-Augmented Engineering',
@@ -91,8 +61,12 @@ export const translations = {
         { label: 'Code Quality', value: 'Elite' },
       ],
     },
+    portfolio: {
+      title: 'Stuck project or need immediate technical firepower? Let\'s talk.',
+      cta: 'Talk to a Specialist',
+    },
     footer: {
-      rights: '© 2026 Converte Global. All rights reserved.',
+      rights: '© 2026 Converte. All rights reserved.',
       location: 'Based in Floripa - Brasil • Serving the World',
       cnpj: 'CNPJ: 58.532.850/0001-10',
     },
@@ -119,75 +93,45 @@ export const translations = {
       flow: 'Flow',
     },
     metadata: {
-      title: 'Converte - Desenvolvimento Web de Elite para Marcas Globais',
-      description: 'Desenvolvemos e-commerces de alta performance e aplicações web escaláveis usando Shopify, VTEX, React e WordPress. Especialistas seniores com custo-benefício global',
+      title: 'Converte - O Braço Técnico Sênior que sua Agência Precisa',
+      description: 'Engenharia de alta performance para e-commerces em Shopify, VTEX e React. Resolvemos gargalos técnicos, bugs de checkout e entregamos evolução contínua (White-label).',
     },
     hero: {
-      badge: 'Agência de Desenvolvimento Global',
-      title: 'Desenvolvimento Web de Elite para Marcas Globais.',
-      subtitle: 'Especialistas em Shopify, VTEX e React. Entregamos soluções escaláveis com a senioridade que seu projeto exige e a agilidade que o mercado global demanda.',
-      cta: 'Começar Projeto',
-      secondaryCta: 'Ver Portfólio',
+      badge: 'Parceiro de Engenharia B2B',
+      title: 'Somos o braço técnico que a sua agência precisa para destravar projetos.',
+      subtitle: 'Engenharia de alta performance para e-commerces em Shopify, VTEX e React. Resolvemos gargalos técnicos, bugs de checkout e entregamos evolução contínua (White-label) para o seu cliente nunca parar de vender.',
+      cta: 'Chamar no WhatsApp',
+      secondaryCta: 'Agendar um Café',
+    },
+    socialProof: {
+      title: 'Nível de exigência de grandes marcas, focado na sua operação.',
+      text: 'O mesmo rigor técnico aplicado em projetos para O\'Neill Brasil, McDonald\'s, Seara, Stanley e Whirlpool, agora disponível para escalar as entregas da sua agência sem a necessidade de inflar a folha de pagamento.',
     },
     services: {
-      title: 'Nossa Especialidade',
-      subtitle: 'Stacks modernas para negócios modernos.',
-      shopify: {
-        title: 'Especialistas Shopify',
-        desc: 'E-commerce sem fronteiras. Ajudamos marcas a venderem globalmente com Shopify Markets e temas customizados.',
-      },
-      vtex: {
-        title: 'Especialistas VTEX',
-        desc: 'Soluções escaláveis para operações de grande porte. Especialistas em VTEX IO e arquiteturas de comércio complexas.',
-      },
-      react: {
-        title: 'React & SaaS',
-        desc: 'Soluções front-end escaláveis. Construímos dashboards complexos e aplicações web de alta performance.',
-      },
-      wordpress: {
-        title: 'WordPress de Performance',
-        desc: 'Além do básico. Sites otimizados com Headless WP ou ACF para máximo SEO e velocidade.',
-      },
+      title: 'Pare de perder noites de sono com integrações e bugs complexos.',
+      subtitle: 'Atuamos como seu braço técnico especializado.',
+      topics: [
+        {
+          title: 'Especialista VTEX & Shopify',
+          desc: 'De arquiteturas complexas (VTEX IO) a lojas Shopify globais (Shopify Markets). Dominamos o core das plataformas para entregar conversão e estabilidade.',
+        },
+        {
+          title: 'Operação White-Label para Agências',
+          desc: 'Atuamos nos bastidores da sua agência. Entregamos código limpo e de elite usando a sua bandeira. Seu cliente fica feliz, e você leva o crédito.',
+        },
+        {
+          title: 'Desenvolvimento Acelerado com IA',
+          desc: 'Não escrevemos apenas código, nós o otimizamos. Nosso fluxo de trabalho utiliza modelos avançados de Inteligência Artificial para refatoração e testes. O resultado? Entregas de nível sênior em uma fração do tempo do mercado tradicional.',
+        },
+        {
+          title: 'Comunicação Direta (Zero Burocracia)',
+          desc: 'Respostas rápidas e alinhamento em tempo real. Trabalhamos como uma extensão do seu time, a apenas uma mensagem de Slack ou WhatsApp de distância.',
+        }
+      ],
     },
     about: {
-      title: 'Por que Nearshore com a Converte?',
-      subtitle: 'Escalabilidade inteligente para marcas modernas.',
-      points: [
-        {
-          title: 'Workflows Sincronizados',
-          desc: 'Respostas no mesmo dia e reuniões em tempo real. Estamos a apenas uma mensagem no Slack de distância.',
-        },
-        {
-          title: 'Entrega High-End',
-          desc: 'Engenharia de nível profissional que segue as melhores práticas globais e padrões de código limpo.',
-        },
-        {
-          title: 'Agilidade de Mercado',
-          desc: 'Ciclos de desenvolvimento acelerados para ajudar você a se manter à frente da concorrência.',
-        },
-      ],
-    },
-    agencyPartner: {
-      title: 'Suporte e Evolução para Agências',
-      subtitle: 'Escalar a capacidade da sua agência não deve ser um gargalo. Atuamos como seu braço de desenvolvimento especializado, entregando código de elite.',
-      points: [
-        {
-          title: 'Excelência White-Label',
-          desc: 'Trabalhamos nos bastidores, seguindo seus padrões e entregando resultados de alta qualidade sob sua marca.',
-        },
-        {
-          title: 'Poder de Fogo Especializado',
-          desc: 'Tenha acesso imediato a especialistas seniores em Shopify, VTEX e React sem os custos de contratação.',
-        },
-        {
-          title: 'Evolução Contínua',
-          desc: 'De correções de bugs a lançamentos de grandes funcionalidades, garantimos que as lojas de seus clientes nunca parem de evoluir.',
-        },
-        {
-          title: 'IA como Diferencial de Processo',
-          desc: 'Nosso fluxo de trabalho é "AI-Augmented". Aliamos a expertise de nossos engenheiros a modelos avançados de IA para acelerar o desenvolvimento, garantindo excelência técnica e entregas mais rápidas (Market Agility) que concorrentes tradicionais.',
-        },
-      ],
+      title: 'Da Ilha do Silício para as maiores operações do Brasil.',
+      subtitle: 'Localizada em Florianópolis, a Converte atua como um estúdio de engenharia digital boutique. Diferente de grandes fábricas de software onde seu projeto é apenas mais um número, aqui você tem acesso direto a desenvolvedores seniores focados em resolver o problema do seu cliente de forma definitiva e rentável.',
     },
     aiAugmented: {
       title: 'Engenharia AI-Augmented',
@@ -198,6 +142,10 @@ export const translations = {
         { label: 'Cobertura de Testes', value: '95%+' },
         { label: 'Qualidade do Código', value: 'Elite' },
       ],
+    },
+    portfolio: {
+      title: 'Está com algum projeto travado ou precisando de poder de fogo técnico imediato? Vamos bater um papo.',
+      cta: 'Falar com um Especialista',
     },
     footer: {
       rights: '© 2026 Converte. Todos os direitos reservados.',

@@ -35,10 +35,7 @@ import wooLogo from '../assets/logo_woocommerce_new.c682e49.svg';
 import jsLogo from '../assets/Java-Script--Streamline-Unicons.svg';
 import nextLogo from '../assets/Nextjs--Streamline-Svg-Logos.svg';
 import wpLogo from '../assets/WordPress_blue_logo.svg.png';
-import hubImage from '../assets/Gemini_Generated_Image_jb4uwajb4uwajb4u.png';
-import teamPhoto from '../assets/team_working_florianopolis.png';
 import informalProgrammerPhoto from '../assets/nearshore_developer_floripa.png';
-import automationPhoto from '../assets/ai_automation_pipeline.png';
 import aiAugmentedPhoto from '../assets/ai_augmented_floripa.png';
 
 // Client Logos
@@ -53,13 +50,7 @@ import floripaRealtorLogo from '../assets/clientes/florianopolis-realtor-logo.pn
 
 
 export default function App() {
-  const [lang, setLang] = useState<Language>(() => {
-    if (typeof window !== 'undefined') {
-      const browserLang = navigator.language.split('-')[0];
-      return browserLang === 'pt' ? 'pt' : 'en';
-    }
-    return 'en';
-  });
+  const [lang] = useState<Language>('pt');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   
@@ -196,20 +187,20 @@ export default function App() {
         },
         {
           "@type": "Service",
-          "name": "Shopify Development",
-          "description": t.services.shopify.desc,
+          "name": t.services.topics[0].title,
+          "description": t.services.topics[0].desc,
           "provider": { "@id": "https://www.convertesites.com.br/#organization" }
         },
         {
           "@type": "Service",
-          "name": "VTEX Development",
-          "description": t.services.vtex.desc,
+          "name": t.services.topics[1].title,
+          "description": t.services.topics[1].desc,
           "provider": { "@id": "https://www.convertesites.com.br/#organization" }
         },
         {
           "@type": "Service",
-          "name": "React Web Applications",
-          "description": t.services.react.desc,
+          "name": t.services.topics[2].title,
+          "description": t.services.topics[2].desc,
           "provider": { "@id": "https://www.convertesites.com.br/#organization" }
         }
       ]
@@ -229,11 +220,6 @@ export default function App() {
     };
   }, [lang, t]);
 
-  const toggleLang = () => {
-    const newLang = lang === 'en' ? 'pt' : 'en';
-    setLang(prev => prev === 'en' ? 'pt' : 'en');
-    trackEvent('toggle_language', { language: newLang });
-  };
 
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-teal-500/30">
@@ -252,17 +238,8 @@ export default function App() {
           <div className="hidden md:flex items-center gap-8">
             <a href="#services" className="text-sm font-medium text-gray-600 hover:text-[#14b8a6] transition-colors">{t.nav.services}</a>
             <a href="#about" className="text-sm font-medium text-gray-600 hover:text-[#14b8a6] transition-colors">{t.nav.about}</a>
-            <a href="#agencies" className="text-sm font-medium text-gray-600 hover:text-[#14b8a6] transition-colors">{t.nav.agencies}</a>
             <a href="#contact" className="text-sm font-medium text-gray-600 hover:text-[#14b8a6] transition-colors">{t.nav.contact}</a>
             <a href="https://flow.convertesites.com.br/" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click_nav_flow')} className="text-sm font-medium text-gray-600 hover:text-[#14b8a6] transition-colors">{t.nav.flow}</a>  
-            <button 
-              onClick={toggleLang}
-              className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-200 hover:border-[#14b8a6]/50 transition-all text-sm font-medium text-gray-700"
-              aria-label={lang === 'en' ? 'Switch to Portuguese' : 'Mudar para Inglês'}
-            >
-              <Globe className="w-4 h-4 text-[#14b8a6]" />
-              {lang.toUpperCase()}
-            </button>
             <a href="#contact" onClick={() => { setIsMenuOpen(false); trackEvent('click_cta_nav'); }} className="bg-[#14b8a6] hover:bg-[#0d9488] text-white px-5 py-2 rounded-full text-sm font-bold transition-all transform hover:scale-105 inline-block text-center">
               {t.nav.contact}
             </a>
@@ -291,13 +268,8 @@ export default function App() {
             <div className="flex flex-col gap-6 text-2xl font-medium text-gray-900">
               <a href="#services" onClick={() => setIsMenuOpen(false)}>{t.nav.services}</a>
               <a href="#about" onClick={() => setIsMenuOpen(false)}>{t.nav.about}</a>
-              <a href="#agencies" onClick={() => setIsMenuOpen(false)}>{t.nav.agencies}</a>
               <a href="#contact" onClick={() => setIsMenuOpen(false)}>{t.nav.contact}</a>
               <a href="https://flow.convertesites.com.br/" target="_blank" rel="noopener noreferrer" onClick={() => { setIsMenuOpen(false); trackEvent('click_nav_flow_mobile'); }}>{t.nav.flow}</a>
-              <button onClick={() => { toggleLang(); setIsMenuOpen(false); }} className="flex items-center gap-2 text-[#14b8a6]">
-                <Globe className="w-6 h-6" />
-                {lang === 'en' ? 'Português' : 'English'}
-              </button>
               <a href="#contact" onClick={() => { setIsMenuOpen(false); trackEvent('click_cta_mobile_menu'); }} className="bg-[#14b8a6] text-white px-6 py-3 rounded-full text-center font-bold">
                 {t.nav.contact}
               </a>
@@ -320,16 +292,29 @@ export default function App() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <h1 className="text-4xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-8 text-gray-900">
+            <h1 className="text-3xl md:text-6xl font-bold tracking-tight leading-[1.1] mb-8 text-gray-900">
               {t.hero.title}
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed mb-10 max-w-2xl">
               {t.hero.subtitle}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#contact" onClick={() => trackEvent('click_cta_hero')} className="bg-[#14b8a6] hover:bg-[#0d9488] text-white px-8 py-4 rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2 group shadow-lg shadow-teal-500/20">
+              <a 
+                href={`https://api.whatsapp.com/send?phone=5548991775899&text=${encodeURIComponent(t.contact.whatsappMessage)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackEvent('click_cta_hero_whatsapp')} 
+                className="bg-[#14b8a6] hover:bg-[#0d9488] text-white px-8 py-4 rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2 group shadow-lg shadow-teal-500/20"
+              >
                 {t.hero.cta}
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <MessageCircle className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <a 
+                href="#contact" 
+                onClick={() => trackEvent('click_cta_hero_coffee')} 
+                className="bg-white border-2 border-[#14b8a6] text-[#14b8a6] hover:bg-teal-50 px-8 py-4 rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2"
+              >
+                {t.hero.secondaryCta}
               </a>
             </div>
           </motion.div>
@@ -355,23 +340,23 @@ export default function App() {
       <section id="services" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">{t.services.title}</h2>
+            <h2 className="text-2xl md:text-4xl font-bold mb-4 text-gray-900">{t.services.title}</h2>
             <p className="text-gray-600">{t.services.subtitle}</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { icon: <ShoppingBag className="w-8 h-8 text-[#14b8a6]" />, ...t.services.shopify },
-              { icon: <Zap className="w-8 h-8 text-pink-500" />, ...t.services.vtex },
-              { icon: <Code2 className="w-8 h-8 text-blue-500" />, ...t.services.react },
-              { icon: <Layout className="w-8 h-8 text-purple-500" />, ...t.services.wordpress },
-            ].map((service, idx) => (
+            {t.services.topics.map((service, idx) => (
               <motion.div 
                 key={idx}
                 whileHover={{ y: -10 }}
                 className="p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-[#14b8a6]/30 transition-all"
               >
-                <div className="mb-6">{service.icon}</div>
+                <div className="mb-6">
+                  {idx === 0 ? <ShoppingBag className="w-8 h-8 text-[#14b8a6]" /> : 
+                   idx === 1 ? <ShieldCheck className="w-8 h-8 text-indigo-500" /> : 
+                   idx === 2 ? <Bot className="w-8 h-8 text-purple-500" /> : 
+                   <MessageCircle className="w-8 h-8 text-blue-500" />}
+                </div>
                 <h3 className="text-xl font-bold mb-4 text-gray-900">{service.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{service.desc}</p>
               </motion.div>
@@ -385,22 +370,10 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900">{t.about.title}</h2>
-              <p className="text-xl text-gray-600 mb-12">{t.about.subtitle}</p>
-              
-              <div className="space-y-8">
-                {t.about.points.map((point, idx) => (
-                  <div key={idx} className="flex gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-[#14b8a6]/10 border border-[#14b8a6]/20 flex items-center justify-center">
-                      {idx === 0 ? <Clock className="w-6 h-6 text-[#14b8a6]" /> : idx === 1 ? <CheckCircle2 className="w-6 h-6 text-[#14b8a6]" /> : <Zap className="w-6 h-6 text-[#14b8a6]" />}
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-bold mb-1 text-gray-900">{point.title}</h4>
-                      <p className="text-gray-600">{point.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <h2 className="text-2xl md:text-4xl font-bold mb-6 text-gray-900">{t.about.title}</h2>
+              <p className="text-xl text-gray-600 leading-relaxed">
+                {t.about.subtitle}
+              </p>
             </div>
 
             <div className="relative">
@@ -418,58 +391,16 @@ export default function App() {
         </div>
       </section>
 
-      {/* Agency & Consultancy Support Section */}
-      <section id="agencies" className="py-24 bg-gray-50 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="order-2 lg:order-1">
-              <div className="relative">
-                <div className="aspect-square rounded-3xl overflow-hidden border border-gray-100 bg-linear-to-br from-indigo-500/10 to-[#14b8a6]/10 p-1">
-                  <div className="w-full h-full bg-gray-50 rounded-[22px] flex items-center justify-center relative overflow-hidden">
-                    <img 
-                      src={teamPhoto} 
-                      alt="Converte Engineering Team Florianópolis" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-                {/* Decorative blobs */}
-                <div className="absolute -top-10 -right-10 w-32 h-32 bg-indigo-500/10 blur-3xl rounded-full" />
-                <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-teal-500/10 blur-3xl rounded-full" />
-              </div>
-            </div>
-
-            <div className="order-1 lg:order-2">
-              <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900">{t.agencyPartner.title}</h2>
-              <p className="text-xl text-gray-600 mb-12">{t.agencyPartner.subtitle}</p>
-              
-              <div className="space-y-8">
-                {t.agencyPartner.points.map((point, idx) => (
-                  <div key={idx} className="flex gap-4">
-                    <div className="shrink-0 w-12 h-12 rounded-2xl bg-[#14b8a6]/10 border border-[#14b8a6]/20 flex items-center justify-center">
-                      {idx === 0 ? <ShieldCheck className="w-6 h-6 text-[#14b8a6]" /> : idx === 1 ? <Users className="w-6 h-6 text-[#14b8a6]" /> : idx === 2 ? <TrendingUp className="w-6 h-6 text-[#14b8a6]" /> : <Bot className="w-6 h-6 text-[#14b8a6]" />}
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-bold mb-1 text-gray-900">{point.title}</h4>
-                      <p className="text-gray-600">{point.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* AI Augmented Section */}
-      <section id="ai-augmented" className="py-24 bg-white overflow-hidden relative">
+      <section id="ai-augmented" className="py-24 bg-gray-50 overflow-hidden relative">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#14b8a6]/5 blur-[150px] rounded-full pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-500/5 blur-[150px] rounded-full pointer-events-none" />
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight! text-gray-900">{t.aiAugmented.title}</h2>
+              <h2 className="text-2xl md:text-4xl font-bold mb-6 leading-tight! text-gray-900">{t.aiAugmented.title}</h2>
               <p className="text-xl text-gray-600 mb-12 leading-relaxed">
                 {t.aiAugmented.description}
               </p>
@@ -507,24 +438,32 @@ export default function App() {
       {/* Portfolio CTA Section */}
       <section id="portfolio" className="py-24 bg-[#14b8a6]">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tight">
-            {lang === 'en' ? 'Your vision, our engineering.' : 'Sua visão, nossa engenharia.'}
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 tracking-tight">
+            {t.portfolio.title}
           </h2>
-          <p className="text-white/80 text-xl mb-12 max-w-2xl mx-auto font-medium">
-            {lang === 'en' 
-              ? 'From NY startups to global operations in Brazil, we deliver clean code and elite performance in Shopify, React, and VTEX. Ready to build?' 
-              : 'De startups em NY a operações globais no Brasil, entregamos código limpo e performance de elite em Shopify, React e VTEX. Vamos tirar sua ideia do papel?'}
-          </p>
-          <a href="#contact" onClick={() => trackEvent('click_cta_portfolio')} className="bg-white text-[#14b8a6] px-10 py-5 rounded-full font-bold text-xl hover:scale-105 transition-transform shadow-2xl inline-block">
-            {t.hero.cta}
-          </a>
+          <div className="flex justify-center">
+            <a 
+              href={`https://api.whatsapp.com/send?phone=5548991775899&text=${encodeURIComponent(t.contact.whatsappMessage)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackEvent('click_cta_portfolio')} 
+              className="bg-white text-[#14b8a6] px-10 py-5 rounded-full font-bold text-xl hover:scale-105 transition-transform shadow-2xl inline-block"
+            >
+              {t.portfolio.cta}
+            </a>
+          </div>
         </div>
       </section>
-      <section className="py-24 px-4 relative overflow-hidden">
+      <section className="py-24 px-4 relative overflow-hidden bg-white">
         <div className="max-w-7xl mx-auto"> 
-          <h2 className="text-3xl md:text-5xl font-bold mb-12 text-gray-900 text-center">
-            {lang === 'en' ? 'Our Clients' : 'Nossos Clientes'}
-          </h2>
+          <div className="text-center max-w-4xl mx-auto mb-16">
+            <h2 className="text-2xl md:text-4xl font-bold mb-6 text-gray-900">
+              {t.socialProof.title}
+            </h2>
+            <p className="text-xl text-gray-600 leading-relaxed">
+              {t.socialProof.text}
+            </p>
+          </div>
           
           <div className="relative overflow-hidden mask-[linear-gradient(to_right,transparent,white_15%,white_85%,transparent)]">
             <motion.div 
@@ -552,10 +491,10 @@ export default function App() {
         </div>
       </section>
       {/* Contact Section */}
-      <section id="contact" className="py-24 bg-white">
+      <section id="contact" className="py-24 bg-gray-50">
         <div className="max-w-3xl mx-auto px-6">
           <div className="bg-gray-50 rounded-[40px] p-8 md:p-12 border border-gray-100 shadow-sm">
-            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-center text-gray-900">{t.contact.title}</h2>
+            <h2 className="text-2xl md:text-4xl font-bold mb-8 text-center text-gray-900">{t.contact.title}</h2>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">

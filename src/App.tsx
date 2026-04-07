@@ -173,7 +173,7 @@ export default function App() {
         {
           "@type": "ProfessionalService",
           "name": "Converte - Digital Engineering",
-          "image": "https://www.convertesites.com.br/assets/Gemini_Generated_Image_jb4uwajb4uwajb4u-ApP3hCxb.png",
+          "image": "https://www.convertesites.com.br/og-image-v2.png",
           "@id": "https://www.convertesites.com.br/#service",
           "url": "https://www.convertesites.com.br/",
           "telephone": "+5548991775899",

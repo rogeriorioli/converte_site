@@ -202,6 +202,12 @@ export default function App() {
           "name": t.services.topics[2].title,
           "description": t.services.topics[2].desc,
           "provider": { "@id": "https://www.convertesites.com.br/#organization" }
+        },
+        {
+          "@type": "Service",
+          "name": t.services.topics[3].title,
+          "description": t.services.topics[3].desc,
+          "provider": { "@id": "https://www.convertesites.com.br/#organization" }
         }
       ]
     };
@@ -278,8 +284,9 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      {/* Hero Section */}
-      <section className="relative pt-40 pb-20 overflow-hidden">
+      <main>
+        {/* Hero Section */}
+        <section className="relative pt-40 pb-20 overflow-hidden" aria-labelledby="hero-title">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none">
           <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-[#14b8a6]/5 blur-[120px] rounded-full" />
           <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-500/5 blur-[120px] rounded-full" />
@@ -292,7 +299,7 @@ export default function App() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <h1 className="text-3xl md:text-6xl font-bold tracking-tight leading-[1.1] mb-8 text-gray-900">
+            <h1 id="hero-title" className="text-3xl md:text-6xl font-bold tracking-tight leading-[1.1] mb-8 text-gray-900">
               {t.hero.title}
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed mb-10 max-w-2xl">
@@ -313,6 +320,7 @@ export default function App() {
                 href="#contact" 
                 onClick={() => trackEvent('click_cta_hero_coffee')} 
                 className="bg-white border-2 border-[#14b8a6] text-[#14b8a6] hover:bg-teal-50 px-8 py-4 rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2"
+                aria-label="Agendar conversa ou café com especialista"
               >
                 {t.hero.secondaryCta}
               </a>
@@ -326,12 +334,12 @@ export default function App() {
             transition={{ delay: 0.8 }}
             className="mt-24 pt-12 border-t border-gray-100 flex overflow-x-auto md:flex-wrap md:justify-between items-center gap-12 transition-all pb-4 scrollbar-hide"
           >
-            <img src={shopifyLogo} alt="Shopify" className="h-8 w-auto shrink-0" />
-            <img src={vtexLogo} alt="VTEX" className="h-8 w-auto shrink-0" />
-            <img src={wooLogo} alt="WooCommerce" className="h-8 w-auto shrink-0" />
-            <img src={jsLogo} alt="JavaScript" className="h-8 w-auto shrink-0" />
-            <img src={nextLogo} alt="Next.js" className="h-10 w-auto shrink-0" />
-            <img src={wpLogo} alt="WordPress" className="h-8 w-auto shrink-0" />
+            <img src={shopifyLogo} alt="Shopify E-commerce Platform Logo" className="h-8 w-auto shrink-0" loading="lazy" />
+            <img src={vtexLogo} alt="VTEX Enterprise Digital Commerce Logo" className="h-8 w-auto shrink-0" loading="lazy" />
+            <img src={wooLogo} alt="WooCommerce E-commerce Plugin Logo" className="h-8 w-auto shrink-0" loading="lazy" />
+            <img src={jsLogo} alt="JavaScript Programming Language Logo" className="h-8 w-auto shrink-0" loading="lazy" />
+            <img src={nextLogo} alt="Next.js React Framework Logo" className="h-10 w-auto shrink-0" loading="lazy" />
+            <img src={wpLogo} alt="WordPress CMS Logo" className="h-8 w-auto shrink-0" loading="lazy" />
           </motion.div>
         </div>
       </section>
@@ -381,8 +389,9 @@ export default function App() {
                 <div className="w-full h-full bg-gray-50 rounded-[22px] flex items-center justify-center relative overflow-hidden">
                   <img 
                     src={informalProgrammerPhoto} 
-                    alt="Converte Nearshore Talent Florianópolis" 
+                    alt="Desenvolvedores sênior da Converte trabalhando em Florianópolis - Ilha do Silício" 
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -424,8 +433,9 @@ export default function App() {
                 <div className="w-full h-full bg-white rounded-[38px] flex items-center justify-center relative overflow-hidden">
                   <img 
                     src={aiAugmentedPhoto} 
-                    alt="Software engineer using AI coding assistant with Florianópolis in background" 
+                    alt="Engenheiro de software utilizando inteligência artificial para otimizar código e acelerar entregas" 
                     className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-gray-900/40 via-transparent to-transparent pointer-events-none"></div>
                 </div>
@@ -565,6 +575,7 @@ export default function App() {
         </div>
       </section>
 
+      </main>
       {/* Footer */}
       <footer className="py-12 border-t border-gray-100 bg-white">
         <div className="max-w-7xl mx-auto px-6">
@@ -574,13 +585,13 @@ export default function App() {
             </button>
             
             <div className="flex justify-center items-center gap-6">
-              <a href="https://instagram.com/convertesites" onClick={() => trackEvent('click_social', { platform: 'instagram' })} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#14b8a6] transition-colors">
+              <a href="https://instagram.com/convertesites" onClick={() => trackEvent('click_social', { platform: 'instagram' })} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#14b8a6] transition-colors" aria-label="Siga a Converte no Instagram">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="https://www.linkedin.com/company/convertesites/" onClick={() => trackEvent('click_social', { platform: 'linkedin' })} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#14b8a6] transition-colors">
+              <a href="https://www.linkedin.com/company/convertesites/" onClick={() => trackEvent('click_social', { platform: 'linkedin' })} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#14b8a6] transition-colors" aria-label="Acompanhe a Converte no LinkedIn">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href={`https://api.whatsapp.com/send?phone=5548991775899&text=${encodeURIComponent(t.contact.whatsappMessage)}`} onClick={() => trackEvent('click_social', { platform: 'whatsapp' })} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#14b8a6] transition-colors">
+              <a href={`https://api.whatsapp.com/send?phone=5548991775899&text=${encodeURIComponent(t.contact.whatsappMessage)}`} onClick={() => trackEvent('click_social', { platform: 'whatsapp' })} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#14b8a6] transition-colors" aria-label="Fale conosco pelo WhatsApp">
                 <MessageCircle className="w-5 h-5" />
               </a>
             </div>

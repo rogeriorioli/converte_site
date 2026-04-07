@@ -93,8 +93,8 @@ export const translations = {
       flow: 'Flow',
     },
     metadata: {
-      title: 'Converte - O Braço Técnico Sênior que sua Agência Precisa',
-      description: 'Engenharia de alta performance para e-commerces em Shopify, VTEX e React. Resolvemos gargalos técnicos, bugs de checkout e entregamos evolução contínua (White-label).',
+      title: 'Converte | Braço Técnico para Agências: Shopify, VTEX e React',
+      description: 'O parceiro de engenharia sênior que sua agência precisa. Especialistas em E-commerce de Alta Performance (Shopify, VTEX) e Aplicações React. Destrave projetos com senioridade e escala.',
     },
     hero: {
       badge: 'Parceiro de Engenharia B2B',

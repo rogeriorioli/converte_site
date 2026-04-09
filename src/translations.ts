@@ -16,7 +16,8 @@ export const translations = {
     },
     hero: {
       badge: 'B2B Engineering Partner',
-      title: 'We are the technical arm your agency needs to unlock projects.',
+      titleStart: 'We are the technical arm your ',
+      titleEnd: 'needs to unlock projects.',
       subtitle: 'High-performance engineering for Shopify, VTEX, and React. We resolve technical bottlenecks, checkout bugs, and deliver white-label continuous evolution so your clients never stop selling.',
       cta: 'Talk on WhatsApp',
       secondaryCta: 'Schedule a Coffee',
@@ -48,8 +49,8 @@ export const translations = {
       ],
     },
     about: {
-      title: 'From Silicon Island to Brazil\'s largest operations.',
-      subtitle: 'Located in Florianópolis, Converte acts as a boutique digital engineering studio. Unlike large software factories where your project is just another number, here you have direct access to senior developers focused on solving your client\'s problem definitively and profitably.',
+      title: 'Senior Engineering for Brazil\'s largest operations',
+      subtitle: 'Based in Brazil, Converte acts as a boutique digital engineering studio. Unlike large software factories where your project is just another number, here you have direct access to senior developers focused on solving your client\'s problem definitively and profitably.',
     },
     aiAugmented: {
       title: 'AI-Augmented Engineering',
@@ -67,7 +68,7 @@ export const translations = {
     },
     footer: {
       rights: '© 2026 Converte. All rights reserved.',
-      location: 'Based in Floripa - Brasil • Serving the World',
+      location: 'Based in Brazil • Serving the World',
       cnpj: 'CNPJ: 58.532.850/0001-10',
     },
     contact: {
@@ -98,7 +99,8 @@ export const translations = {
     },
     hero: {
       badge: 'Parceiro de Engenharia B2B',
-      title: 'Somos o braço técnico que a sua agência precisa para destravar projetos.',
+      titleStart: 'Somos o braço técnico que a sua ',
+      titleEnd: 'precisa para destravar projetos.',
       subtitle: 'Engenharia de alta performance para e-commerces em Shopify, VTEX e React. Resolvemos gargalos técnicos, bugs de checkout e entregamos evolução contínua (White-label) para o seu cliente nunca parar de vender.',
       cta: 'Chamar no WhatsApp',
       secondaryCta: 'Agendar um Café',
@@ -130,8 +132,8 @@ export const translations = {
       ],
     },
     about: {
-      title: 'Da Ilha do Silício para as maiores operações do Brasil.',
-      subtitle: 'Localizada em Florianópolis, a Converte atua como um estúdio de engenharia digital boutique. Diferente de grandes fábricas de software onde seu projeto é apenas mais um número, aqui você tem acesso direto a desenvolvedores seniores focados em resolver o problema do seu cliente de forma definitiva e rentável.',
+      title: 'Do Brasil para as maiores operações do mundo.',
+      subtitle: 'Sediada no Brasil, a Converte atua como um estúdio de engenharia digital boutique. Diferente de grandes fábricas de software onde seu projeto é apenas mais um número, aqui você tem acesso direto a desenvolvedores seniores focados em resolver o problema do seu cliente de forma definitiva e rentável.',
     },
     aiAugmented: {
       title: 'Engenharia AI-Augmented',
@@ -149,7 +151,7 @@ export const translations = {
     },
     footer: {
       rights: '© 2026 Converte. Todos os direitos reservados.',
-      location: 'Sediada em Floripa - Brasil • Atendendo o Mundo',
+      location: 'Sediada no Brasil • Atendendo o Mundo',
       cnpj: 'CNPJ: 58.532.850/0001-10',
     },
     contact: {

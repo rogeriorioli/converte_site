@@ -35,8 +35,8 @@ import wooLogo from '../assets/logo_woocommerce_new.c682e49.svg';
 import jsLogo from '../assets/Java-Script--Streamline-Unicons.svg';
 import nextLogo from '../assets/Nextjs--Streamline-Svg-Logos.svg';
 import wpLogo from '../assets/WordPress_blue_logo.svg.png';
-import informalProgrammerPhoto from '../assets/nearshore_developer_floripa.png';
-import aiAugmentedPhoto from '../assets/ai_augmented_floripa.png';
+import informalProgrammerPhoto from '../assets/nearshore_developer_brazil.png';
+import aiAugmentedPhoto from '../assets/ai_augmented_coding.png';
 
 // Client Logos
 import flycompLogo from '../assets/clientes/flycomp_logo.png';
@@ -46,7 +46,7 @@ import ilhaLogo from '../assets/clientes/ilha_logo.webp';
 import institutoLogo from '../assets/clientes/instituto_logo.jpg';
 import oneillLogo from '../assets/clientes/oneill_logo.svg';
 import tagLogo from '../assets/clientes/tag_logo.jpg';
-import floripaRealtorLogo from '../assets/clientes/florianopolis-realtor-logo.png';
+import floripaRealtorLogo from '../assets/clientes/brazil-realtor-logo.png';
 
 
 export default function App() {
@@ -56,8 +56,13 @@ export default function App() {
   
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [wordIndex, setWordIndex] = useState(0);
 
   const t = translations[lang];
+
+  const rotatingWords = lang === 'pt' 
+    ? ['agência', 'consultoria', 'startup', 'software house']
+    : ['agency', 'consultancy', 'startup', 'software house'];
 
   const clientLogos = [
     { src: flycompLogo, alt: 'Flycomp' },
@@ -67,7 +72,7 @@ export default function App() {
     { src: institutoLogo, alt: 'Instituto', className: 'rounded-md' },
     { src: oneillLogo, alt: 'O\'Neill' },
     { src: tagLogo, alt: 'Tag' },
-    { src: floripaRealtorLogo, alt: 'Florianópolis Realtor' },
+    { src: floripaRealtorLogo, alt: 'Brazil Realtor' },
   ].sort((a, b) => a.alt.localeCompare(b.alt));
   
   const trackEvent = (eventName: string, params?: object) => {
@@ -123,6 +128,13 @@ export default function App() {
   }, []);
 
   useEffect(() => {
+    const interval = setInterval(() => {
+      setWordIndex((prev) => (prev + 1) % rotatingWords.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [rotatingWords.length]);
+
+  useEffect(() => {
     // Basic Metadata
     document.title = t.metadata.title;
     document.documentElement.lang = lang;
@@ -173,14 +185,14 @@ export default function App() {
         {
           "@type": "ProfessionalService",
           "name": "Converte - Digital Engineering",
-          "image": "https://www.convertesites.com.br/og-image-v2.png",
+          "image": "https://www.convertesites.com.br/ai_augmented_coding.png",
           "@id": "https://www.convertesites.com.br/#service",
           "url": "https://www.convertesites.com.br/",
           "telephone": "+5548991775899",
           "priceRange": "$$",
           "address": {
             "@type": "PostalAddress",
-            "addressLocality": "Florianópolis",
+            "addressLocality": "Brasil",
             "addressRegion": "SC",
             "addressCountry": "BR"
           }
@@ -300,7 +312,22 @@ export default function App() {
             className="max-w-3xl"
           >
             <h1 id="hero-title" className="text-3xl md:text-6xl font-bold tracking-tight leading-[1.1] mb-8 text-gray-900">
-              {t.hero.title}
+              {t.hero.titleStart}
+              <span className="inline-flex text-[#14b8a6]">
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={wordIndex}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
+                  >
+                    {rotatingWords[wordIndex]}
+                  </motion.span>
+                </AnimatePresence>
+              </span>
+              <br />
+              {t.hero.titleEnd}
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed mb-10 max-w-2xl">
               {t.hero.subtitle}
@@ -389,7 +416,7 @@ export default function App() {
                 <div className="w-full h-full bg-gray-50 rounded-[22px] flex items-center justify-center relative overflow-hidden">
                   <img 
                     src={informalProgrammerPhoto} 
-                    alt="Desenvolvedores sênior da Converte trabalhando em Florianópolis - Ilha do Silício" 
+                    alt="Desenvolvedores sênior da Converte trabalhando no Brasil" 
                     className="w-full h-full object-cover"
                     loading="lazy"
                   />

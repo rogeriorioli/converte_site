@@ -9,6 +9,7 @@ export const translations = {
       portfolio: 'Portfolio',
       contact: 'Start Project',
       flow: 'Flow',
+      turbo: 'Turbo Pack',
     },
     metadata: {
       title: 'Converte - The Senior Technical Arm for Your Agency',
@@ -92,6 +93,7 @@ export const translations = {
       portfolio: 'Portfólio',
       contact: 'Começar Projeto',
       flow: 'Flow',
+      turbo: 'Turbo Pack',
     },
     metadata: {
       title: 'Converte | Braço Técnico para Agências: Shopify, VTEX e React',

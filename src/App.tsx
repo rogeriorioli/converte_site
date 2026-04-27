@@ -257,7 +257,8 @@ export default function App() {
             <a href="#services" className="text-sm font-medium text-gray-600 hover:text-[#14b8a6] transition-colors">{t.nav.services}</a>
             <a href="#about" className="text-sm font-medium text-gray-600 hover:text-[#14b8a6] transition-colors">{t.nav.about}</a>
             <a href="#contact" className="text-sm font-medium text-gray-600 hover:text-[#14b8a6] transition-colors">{t.nav.contact}</a>
-            <a href="https://flow.convertesites.com.br/" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click_nav_flow')} className="text-sm font-medium text-gray-600 hover:text-[#14b8a6] transition-colors">{t.nav.flow}</a>  
+            <a href="https://flow.convertesites.com.br/" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click_nav_flow')} className="text-sm font-medium text-gray-600 hover:text-[#14b8a6] transition-colors">{t.nav.flow}</a>
+            <a href="https://turbo.convertesites.com.br/" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent('click_nav_turbo')} className="text-sm font-medium text-gray-600 hover:text-[#14b8a6] transition-colors">{t.nav.turbo}</a>  
             <a href="#contact" onClick={() => { setIsMenuOpen(false); trackEvent('click_cta_nav'); }} className="bg-[#14b8a6] hover:bg-[#0d9488] text-white px-5 py-2 rounded-full text-sm font-bold transition-all transform hover:scale-105 inline-block text-center">
               {t.nav.contact}
             </a>
@@ -288,6 +289,7 @@ export default function App() {
               <a href="#about" onClick={() => setIsMenuOpen(false)}>{t.nav.about}</a>
               <a href="#contact" onClick={() => setIsMenuOpen(false)}>{t.nav.contact}</a>
               <a href="https://flow.convertesites.com.br/" target="_blank" rel="noopener noreferrer" onClick={() => { setIsMenuOpen(false); trackEvent('click_nav_flow_mobile'); }}>{t.nav.flow}</a>
+              <a href="https://turbo.convertesites.com.br/" target="_blank" rel="noopener noreferrer" onClick={() => { setIsMenuOpen(false); trackEvent('click_nav_turbo_mobile'); }}>{t.nav.turbo}</a>
               <a href="#contact" onClick={() => { setIsMenuOpen(false); trackEvent('click_cta_mobile_menu'); }} className="bg-[#14b8a6] text-white px-6 py-3 rounded-full text-center font-bold">
                 {t.nav.contact}
               </a>

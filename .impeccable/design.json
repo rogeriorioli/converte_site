@@ -1,0 +1,465 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-02T10:24:32.581Z",
+  "title": "Design System: Converte",
+  "extensions": {
+    "colorMeta": {
+      "brand": {
+        "role": "primary",
+        "displayName": "Turquesa da marca",
+        "tonalRamp": [
+          "oklch(15% 0.0246 182.50)",
+          "oklch(27% 0.0615 182.50)",
+          "oklch(39% 0.0984 182.50)",
+          "oklch(51% 0.1230 182.50)",
+          "oklch(63% 0.1230 182.50)",
+          "oklch(75% 0.0984 182.50)",
+          "oklch(87% 0.0554 182.50)",
+          "oklch(95% 0.0185 182.50)"
+        ]
+      },
+      "brand-deep": {
+        "role": "primary",
+        "displayName": "Turquesa profundo",
+        "tonalRamp": [
+          "oklch(15% 0.0190 180.58)",
+          "oklch(27% 0.0476 180.58)",
+          "oklch(39% 0.0761 180.58)",
+          "oklch(51% 0.0952 180.58)",
+          "oklch(63% 0.0952 180.58)",
+          "oklch(75% 0.0761 180.58)",
+          "oklch(87% 0.0428 180.58)",
+          "oklch(95% 0.0143 180.58)"
+        ]
+      },
+      "brand-hover": {
+        "role": "primary",
+        "displayName": "Turquesa de resposta",
+        "tonalRamp": [
+          "oklch(15% 0.0245 181.47)",
+          "oklch(27% 0.0613 181.47)",
+          "oklch(39% 0.0981 181.47)",
+          "oklch(51% 0.1226 181.47)",
+          "oklch(63% 0.1226 181.47)",
+          "oklch(75% 0.0981 181.47)",
+          "oklch(87% 0.0552 181.47)",
+          "oklch(95% 0.0184 181.47)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Verde de leitura",
+        "tonalRamp": [
+          "oklch(15% 0.0072 183.86)",
+          "oklch(27% 0.0179 183.86)",
+          "oklch(39% 0.0287 183.86)",
+          "oklch(51% 0.0359 183.86)",
+          "oklch(63% 0.0359 183.86)",
+          "oklch(75% 0.0287 183.86)",
+          "oklch(87% 0.0161 183.86)",
+          "oklch(95% 0.0054 183.86)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Verde secundário",
+        "tonalRamp": [
+          "oklch(15% 0.0059 180.92)",
+          "oklch(27% 0.0148 180.92)",
+          "oklch(39% 0.0236 180.92)",
+          "oklch(51% 0.0295 180.92)",
+          "oklch(63% 0.0295 180.92)",
+          "oklch(75% 0.0236 180.92)",
+          "oklch(87% 0.0133 180.92)",
+          "oklch(95% 0.0044 180.92)"
+        ]
+      },
+      "mint": {
+        "role": "primary",
+        "displayName": "Menta clara",
+        "tonalRamp": [
+          "oklch(15% 0.0038 176.44)",
+          "oklch(27% 0.0095 176.44)",
+          "oklch(39% 0.0153 176.44)",
+          "oklch(51% 0.0191 176.44)",
+          "oklch(63% 0.0191 176.44)",
+          "oklch(75% 0.0153 176.44)",
+          "oklch(87% 0.0086 176.44)",
+          "oklch(95% 0.0029 176.44)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Linha clara",
+        "tonalRamp": [
+          "oklch(15% 0.0029 169.22)",
+          "oklch(27% 0.0072 169.22)",
+          "oklch(39% 0.0116 169.22)",
+          "oklch(51% 0.0144 169.22)",
+          "oklch(63% 0.0144 169.22)",
+          "oklch(75% 0.0116 169.22)",
+          "oklch(87% 0.0065 169.22)",
+          "oklch(95% 0.0022 169.22)"
+        ]
+      },
+      "soft": {
+        "role": "neutral",
+        "displayName": "Branco suave",
+        "tonalRamp": [
+          "oklch(15% 0.0008 157.18)",
+          "oklch(27% 0.0021 157.18)",
+          "oklch(39% 0.0033 157.18)",
+          "oklch(51% 0.0041 157.18)",
+          "oklch(63% 0.0041 157.18)",
+          "oklch(75% 0.0033 157.18)",
+          "oklch(87% 0.0019 157.18)",
+          "oklch(95% 0.0006 157.18)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Branco",
+        "tonalRamp": [
+          "oklch(15% 0.0000 0.00)",
+          "oklch(27% 0.0000 0.00)",
+          "oklch(39% 0.0000 0.00)",
+          "oklch(51% 0.0000 0.00)",
+          "oklch(63% 0.0000 0.00)",
+          "oklch(75% 0.0000 0.00)",
+          "oklch(87% 0.0000 0.00)",
+          "oklch(95% 0.0000 0.00)"
+        ]
+      },
+      "button-ink": {
+        "role": "neutral",
+        "displayName": "Texto do botão",
+        "tonalRamp": [
+          "oklch(15% 0.0082 177.32)",
+          "oklch(27% 0.0204 177.32)",
+          "oklch(39% 0.0327 177.32)",
+          "oklch(51% 0.0409 177.32)",
+          "oklch(63% 0.0409 177.32)",
+          "oklch(75% 0.0327 177.32)",
+          "oklch(87% 0.0184 177.32)",
+          "oklch(95% 0.0061 177.32)"
+        ]
+      },
+      "field": {
+        "role": "neutral",
+        "displayName": "Campo claro",
+        "tonalRamp": [
+          "oklch(15% 0.0010 165.01)",
+          "oklch(27% 0.0025 165.01)",
+          "oklch(39% 0.0040 165.01)",
+          "oklch(51% 0.0050 165.01)",
+          "oklch(63% 0.0050 165.01)",
+          "oklch(75% 0.0040 165.01)",
+          "oklch(87% 0.0022 165.01)",
+          "oklch(95% 0.0007 165.01)"
+        ]
+      },
+      "field-border": {
+        "role": "neutral",
+        "displayName": "Borda de campo",
+        "tonalRamp": [
+          "oklch(15% 0.0065 166.08)",
+          "oklch(27% 0.0162 166.08)",
+          "oklch(39% 0.0260 166.08)",
+          "oklch(51% 0.0325 166.08)",
+          "oklch(63% 0.0325 166.08)",
+          "oklch(75% 0.0260 166.08)",
+          "oklch(87% 0.0146 166.08)",
+          "oklch(95% 0.0049 166.08)"
+        ]
+      },
+      "inverse-text": {
+        "role": "neutral",
+        "displayName": "Texto inverso",
+        "tonalRamp": [
+          "oklch(15% 0.0020 164.87)",
+          "oklch(27% 0.0050 164.87)",
+          "oklch(39% 0.0080 164.87)",
+          "oklch(51% 0.0100 164.87)",
+          "oklch(63% 0.0100 164.87)",
+          "oklch(75% 0.0080 164.87)",
+          "oklch(87% 0.0045 164.87)",
+          "oklch(95% 0.0015 164.87)"
+        ]
+      },
+      "inverse-muted": {
+        "role": "neutral",
+        "displayName": "Texto inverso secundário",
+        "tonalRamp": [
+          "oklch(15% 0.0058 174.38)",
+          "oklch(27% 0.0145 174.38)",
+          "oklch(39% 0.0232 174.38)",
+          "oklch(51% 0.0290 174.38)",
+          "oklch(63% 0.0290 174.38)",
+          "oklch(75% 0.0232 174.38)",
+          "oklch(87% 0.0130 174.38)",
+          "oklch(95% 0.0043 174.38)"
+        ]
+      },
+      "inverse-accent": {
+        "role": "primary",
+        "displayName": "Menta inversa",
+        "tonalRamp": [
+          "oklch(15% 0.0124 171.68)",
+          "oklch(27% 0.0309 171.68)",
+          "oklch(39% 0.0495 171.68)",
+          "oklch(51% 0.0618 171.68)",
+          "oklch(63% 0.0618 171.68)",
+          "oklch(75% 0.0495 171.68)",
+          "oklch(87% 0.0278 171.68)",
+          "oklch(95% 0.0093 171.68)"
+        ]
+      },
+      "inverse-line": {
+        "role": "neutral",
+        "displayName": "Linha inversa",
+        "tonalRamp": [
+          "oklch(15% 0.0072 177.06)",
+          "oklch(27% 0.0179 177.06)",
+          "oklch(39% 0.0286 177.06)",
+          "oklch(51% 0.0358 177.06)",
+          "oklch(63% 0.0358 177.06)",
+          "oklch(75% 0.0286 177.06)",
+          "oklch(87% 0.0161 177.06)",
+          "oklch(95% 0.0054 177.06)"
+        ]
+      },
+      "selection": {
+        "role": "primary",
+        "displayName": "Seleção menta",
+        "tonalRamp": [
+          "oklch(15% 0.0134 175.85)",
+          "oklch(27% 0.0336 175.85)",
+          "oklch(39% 0.0537 175.85)",
+          "oklch(51% 0.0671 175.85)",
+          "oklch(63% 0.0671 175.85)",
+          "oklch(75% 0.0537 175.85)",
+          "oklch(87% 0.0302 175.85)",
+          "oklch(95% 0.0101 175.85)"
+        ]
+      },
+      "error": {
+        "role": "neutral",
+        "displayName": "Erro terroso",
+        "tonalRamp": [
+          "oklch(15% 0.0232 28.77)",
+          "oklch(27% 0.0579 28.77)",
+          "oklch(39% 0.0926 28.77)",
+          "oklch(51% 0.1158 28.77)",
+          "oklch(63% 0.1158 28.77)",
+          "oklch(75% 0.0926 28.77)",
+          "oklch(87% 0.0521 28.77)",
+          "oklch(95% 0.0174 28.77)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "display",
+        "purpose": "Título principal com variantes responsivas explícitas."
+      },
+      "headline": {
+        "displayName": "headline",
+        "purpose": "Base dos títulos de seção."
+      },
+      "title": {
+        "displayName": "title",
+        "purpose": "Títulos das linhas de serviço."
+      },
+      "body": {
+        "displayName": "body",
+        "purpose": "Descrições de serviços."
+      },
+      "label": {
+        "displayName": "label",
+        "purpose": "Rótulos dos campos de contato."
+      },
+      "button": {
+        "displayName": "button",
+        "purpose": "Texto das ações principais."
+      }
+    },
+    "shadows": [
+      {
+        "name": "mobile-menu",
+        "value": "0 16px 28px -20px #16332f50",
+        "purpose": "Separação do menu móvel sobreposto."
+      },
+      {
+        "name": "current-flow-node",
+        "value": "0 5px 12px -5px #16332f50",
+        "purpose": "Símbolo da etapa atual."
+      }
+    ],
+    "motion": [
+      {
+        "name": "control-transition",
+        "value": "0.2s ease",
+        "purpose": "Hover e transformações de controles."
+      },
+      {
+        "name": "node-transition",
+        "value": "0.3s ease",
+        "purpose": "Cor, fundo e sombra do símbolo de etapa."
+      },
+      {
+        "name": "flow-connector",
+        "value": "0.85s cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Conector horizontal durante simulação."
+      },
+      {
+        "name": "status-pulse",
+        "value": "0.85s ease-out infinite",
+        "purpose": "Indicador durante a simulação."
+      },
+      {
+        "name": "spinner",
+        "value": "1s linear infinite",
+        "purpose": "Espera de simulação ou envio."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms; 1 iteration",
+        "purpose": "Animações/transições reduzidas; scroll auto e simulação diretamente no resultado."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide-min",
+        "value": "1440px"
+      },
+      {
+        "name": "compact-desktop-max",
+        "value": "1100px"
+      },
+      {
+        "name": "tablet-max",
+        "value": "820px"
+      },
+      {
+        "name": "mobile-max",
+        "value": "600px"
+      },
+      {
+        "name": "narrow-max",
+        "value": "360px"
+      }
+    ],
+    "verification": {
+      "basis": "Source inspection only: src/index.css, src/App.tsx, src/content.ts, src/main.tsx and public/fonts.",
+      "renderedReview": "Unavailable: browser automation blocked; no screenshots. Responsive layout, contrast, focus appearance and overflow are not visually certified.",
+      "tonalRamps": "Synthesized OKLCH preview ramps only; not shipped palette tokens or approved additions.",
+      "notCanonized": "Existing helper text at 8–11px and some targets below 44px require review; no source defects repaired by documentation.",
+      "motionConfiguration": "MotionConfig declares 0.4s with [0.22,1,0.36,1], but no Motion-animated elements exist on this surface; omitted from active motion vocabulary."
+    }
+  },
+  "components": [
+    {
+      "name": "Ação principal",
+      "kind": "button",
+      "description": "Ação principal com texto descritivo e ícone vetorial.",
+      "html": "<button type=\"button\" class=\"ds-button\">Vamos falar do seu projeto<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></button>",
+      "css": ".ds-button{display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  gap: 26px;\n  min-height: 54px;\n  padding: 15px 23px;\n  border: 1px solid transparent;\n  border-radius: 7px;\n  background: var(--brand,#14b8a6);\n  color: #12332c;\n  font-size: 14px;\n  line-height: 1.4;\n  font-weight: 650;\n  transition:\n    background-color 0.2s,\n    transform 0.2s;}\n.ds-button:hover{background: #37c8b4;\n  transform: translateY(-2px);}\n.ds-button:active{transform: translateY(0);}\n.ds-button-small{min-height: 43px;\n  padding: 11px 17px;\n  gap: 17px;\n  font-size: 13px;}.ds-button{font-family:\"Inter\",ui-sans-serif,system-ui,sans-serif}.ds-button:focus-visible{outline:3px solid var(--brand-deep,#087f70);outline-offset:5px;border-radius:3px}.ds-button:disabled{opacity:.65;cursor:wait}\n@media(prefers-reduced-motion:reduce){.ds-button,.ds-text-link svg,.ds-contact-form-wrap input,.ds-desktop-nav a,.ds-scenario-tabs button,.ds-faq-list summary svg{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}",
+      "refersTo": "button-primary"
+    },
+    {
+      "name": "Ação compacta",
+      "kind": "button",
+      "description": "Variante compacta do cabeçalho.",
+      "html": "<button type=\"button\" class=\"ds-button ds-button-small\">Vamos conversar<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></button>",
+      "css": ".ds-button{display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  gap: 26px;\n  min-height: 54px;\n  padding: 15px 23px;\n  border: 1px solid transparent;\n  border-radius: 7px;\n  background: var(--brand,#14b8a6);\n  color: #12332c;\n  font-size: 14px;\n  line-height: 1.4;\n  font-weight: 650;\n  transition:\n    background-color 0.2s,\n    transform 0.2s;}\n.ds-button:hover{background: #37c8b4;\n  transform: translateY(-2px);}\n.ds-button:active{transform: translateY(0);}\n.ds-button-small{min-height: 43px;\n  padding: 11px 17px;\n  gap: 17px;\n  font-size: 13px;}.ds-button{font-family:\"Inter\",ui-sans-serif,system-ui,sans-serif}.ds-button:focus-visible{outline:3px solid var(--brand-deep,#087f70);outline-offset:5px;border-radius:3px}.ds-button:disabled{opacity:.65;cursor:wait}\n@media(prefers-reduced-motion:reduce){.ds-button,.ds-text-link svg,.ds-contact-form-wrap input,.ds-desktop-nav a,.ds-scenario-tabs button,.ds-faq-list summary svg{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}",
+      "refersTo": "button-small"
+    },
+    {
+      "name": "Link contextual",
+      "kind": "button",
+      "description": "Link para aprofundar ou iniciar uma conversa.",
+      "html": "<a class=\"ds-text-link\" href=\"#contact\">Conversar sobre uma parceria<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
+      "css": ".ds-text-link{display: inline-flex;\n  align-items: center;\n  gap: 10px;\n  width: fit-content;\n  min-height: 44px;\n  font-size: 14px;\n  font-weight: 600;\n  border: 0;\n  background: transparent;\n  padding: 0;}\n.ds-text-link:hover{text-decoration: underline;}\n.ds-text-link svg{transition: transform 0.2s;}\n.ds-text-link:hover svg{transform: translate(2px, -2px);}.ds-text-link{font-family:\"Inter\",ui-sans-serif,system-ui,sans-serif;color:var(--ink,#16332f);color:var(--brand-deep,#087f70);text-decoration:none;text-underline-offset:5px}.ds-text-link:focus-visible{outline:3px solid var(--brand-deep,#087f70);outline-offset:5px;border-radius:3px}\n@media(prefers-reduced-motion:reduce){.ds-button,.ds-text-link svg,.ds-contact-form-wrap input,.ds-desktop-nav a,.ds-scenario-tabs button,.ds-faq-list summary svg{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}"
+    },
+    {
+      "name": "Campo de contato",
+      "kind": "input",
+      "description": "Rótulo associado e campo claro; texto de entrada cresce no mobile.",
+      "html": "<div class=\"ds-contact-form-wrap\"><label for=\"ds-name\">Seu nome<input id=\"ds-name\" name=\"name\" autocomplete=\"name\" placeholder=\"Como podemos chamar você?\" required></label></div>",
+      "css": ".ds-contact-form-wrap label{display: block;\n  font-size: 12px;\n  font-weight: 550;\n  margin-bottom: 19px;}\n.ds-contact-form-wrap input,\n.ds-contact-form-wrap textarea,\n.ds-contact-form-wrap select{display: block;\n  width: 100%;\n  background: #f8fcfa;\n  border: 1px solid #b6d0c4;\n  border-radius: 5px;\n  min-height: 47px;\n  padding: 12px 14px;\n  margin-top: 8px;\n  font-size: 13px;\n  line-height: 1.5;\n  caret-color: var(--brand-deep,#087f70);\n  font-weight: 400;\n  transition: border-color 0.2s;}\n.ds-contact-form-wrap input:hover,\n.ds-contact-form-wrap select:hover,\n.ds-contact-form-wrap textarea:hover{border-color: #6d9e8d;}\n.ds-contact-form-wrap input::placeholder,\n.ds-contact-form-wrap textarea::placeholder{color: #5b736a;\n  opacity: 1;}\n.ds-contact-form-wrap textarea{resize: vertical;\n  min-height: 104px;}\n.ds-contact-form-wrap :is(input, textarea, select):focus-visible{outline-width: 2px;\n  outline-offset: 2px;}.ds-contact-form-wrap{font-family:\"Inter\",ui-sans-serif,system-ui,sans-serif;color:var(--ink,#16332f);}.ds-contact-form-wrap input{box-sizing:border-box;color:inherit;font-family:inherit}.ds-contact-form-wrap input:focus-visible{outline:2px solid var(--brand-deep,#087f70);outline-offset:2px}@media(max-width:600px){.ds-contact-form-wrap label{font-size:13px}.ds-contact-form-wrap input{font-size:16px;padding-inline:12px}}\n@media(prefers-reduced-motion:reduce){.ds-button,.ds-text-link svg,.ds-contact-form-wrap input,.ds-desktop-nav a,.ds-scenario-tabs button,.ds-faq-list summary svg{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}",
+      "refersTo": "input"
+    },
+    {
+      "name": "Navegação de texto",
+      "kind": "nav",
+      "description": "Fragmento desktop; o menu móvel depende do componente React original.",
+      "html": "<nav class=\"ds-desktop-nav\" aria-label=\"Navegação principal\"><a href=\"#services\">O que fazemos</a><a href=\"#process\">Como trabalhamos</a><a href=\"#about\">Para agências</a></nav>",
+      "css": ".ds-desktop-nav{display: flex;\n  align-items: center;\n  gap: 31px;\n  margin-left: auto;}\n.ds-desktop-nav a{display: inline-flex;\n  align-items: center;\n  min-height: 44px;\n  font-size: 13px;\n  font-weight: 500;\n  color: var(--muted,#536b66);\n  transition: color 0.2s;}\n.ds-desktop-nav a:hover{color: var(--brand-deep,#087f70);}.ds-desktop-nav{font-family:\"Inter\",ui-sans-serif,system-ui,sans-serif;color:var(--ink,#16332f);}.ds-desktop-nav a{text-decoration:none}.ds-desktop-nav a:focus-visible{outline:3px solid var(--brand-deep,#087f70);outline-offset:5px;border-radius:3px}\n@media(prefers-reduced-motion:reduce){.ds-button,.ds-text-link svg,.ds-contact-form-wrap input,.ds-desktop-nav a,.ds-scenario-tabs button,.ds-faq-list summary svg{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}"
+    },
+    {
+      "name": "Cenários",
+      "kind": "chip",
+      "description": "Amostra de estados visuais. O snippet não troca painel nem implementa teclado; o componente React original implementa ambos.",
+      "html": "<div class=\"ds-scenario-tabs\" aria-label=\"Amostra visual dos cenários\"><button type=\"button\" aria-selected=\"true\">Vendas</button><button type=\"button\" aria-selected=\"false\">Operação</button><button type=\"button\" aria-selected=\"false\">Atendimento</button></div>",
+      "css": ".ds-scenario-tabs{display: flex;\n  gap: 2px;\n  padding: 4px;\n  background: #d2eae1;\n  border-radius: 7px;}\n.ds-scenario-tabs button{border: 0;\n  background: transparent;\n  min-height: 36px;\n  padding: 8px 15px;\n  border-radius: 4px;\n  font-size: 12px;\n  font-weight: 550;\n  transition: background-color 0.2s;}\n.ds-scenario-tabs button[aria-selected=\"true\"]{background: var(--white,#fff);}\n.ds-scenario-tabs button:hover{background: #f7fcfa;}.ds-scenario-tabs{width:fit-content;font-family:\"Inter\",ui-sans-serif,system-ui,sans-serif;color:var(--ink,#16332f);}.ds-scenario-tabs button{font-family:inherit;color:inherit;cursor:pointer}.ds-scenario-tabs button:focus-visible{outline:3px solid var(--brand-deep,#087f70);outline-offset:5px;border-radius:3px}@media(max-width:600px){.ds-scenario-tabs button{min-height:37px;padding-inline:14px;font-size:11px}}\n@media(prefers-reduced-motion:reduce){.ds-button,.ds-text-link svg,.ds-contact-form-wrap input,.ds-desktop-nav a,.ds-scenario-tabs button,.ds-faq-list summary svg{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}"
+    },
+    {
+      "name": "Superfície de fluxo",
+      "kind": "card",
+      "description": "Fragmento estático da superfície e de uma etapa atual; nenhuma execução externa.",
+      "html": "<section class=\"ds-flow-lab\" aria-labelledby=\"ds-title\"><div class=\"ds-flow-topline\"><h2 id=\"ds-title\">Seu negócio, conectado.</h2></div><div class=\"ds-flow-nodes\"><div class=\"ds-flow-node ds-is-current\"><div class=\"ds-node-symbol\" aria-hidden=\"true\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m16 18 6-6-6-6M8 6l-6 6 6 6\"/></svg></div><div class=\"ds-node-copy\"><h3>Aplicação web</h3><p>Recebe a solicitação</p></div></div></div><p class=\"ds-flow-disclaimer\">Demonstração ilustrativa. Nenhum dado é enviado e nenhum sistema externo é acionado.</p></section>",
+      "css": ".ds-flow-lab{border-radius: var(--radius,12px);\n  padding: 27px 34px 18px;\n  background: var(--mint,#e4f5f0);}\n.ds-flow-topline{display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 24px;}\n.ds-flow-topline h2{font-size: 21px;\n  font-weight: 550;\n  letter-spacing: -0.025em;}\n.ds-flow-nodes{display: grid;\n  grid-template-columns: repeat(4, minmax(0, 1fr));\n  padding-block: 39px 33px;\n  column-gap: 32px;}\n.ds-flow-node{position: relative;\n  display: grid;\n  grid-template-columns: auto 1fr;\n  align-items: center;\n  gap: 13px;}\n.ds-node-symbol{position: relative;\n  display: grid;\n  place-items: center;\n  width: 46px;\n  height: 46px;\n  background: #f8fcfa;\n  border-radius: 10px;\n  color: var(--brand-deep,#087f70);\n  transition:\n    background-color 0.3s,\n    color 0.3s,\n    box-shadow 0.3s;}\n.ds-flow-node.ds-is-current .ds-node-symbol{background: var(--ink,#16332f);\n  color: var(--white,#fff);\n  box-shadow: 0 5px 12px -5px #16332f50;}\n.ds-flow-node.ds-is-complete .ds-node-symbol{background: #b5e9d7;\n  color: #155a43;}\n.ds-node-copy h3{font-size: 13px;\n  font-weight: 650;\n  line-height: 1.4;\n  margin-bottom: 4px;}\n.ds-node-copy p{color: var(--muted,#536b66);\n  font-size: 11px;\n  line-height: 1.6;}\n.ds-flow-disclaimer{font-size: 10px;\n  color: var(--muted,#536b66);\n  line-height: 1.6;\n  margin-top: 10px;}.ds-flow-lab{font-family:\"Inter\",ui-sans-serif,system-ui,sans-serif;color:var(--ink,#16332f);}.ds-flow-lab h2,.ds-flow-lab h3,.ds-flow-lab p{margin:0}.ds-flow-lab h2{line-height:1.13}.ds-flow-lab .ds-flow-nodes{grid-template-columns:1fr}.ds-flow-lab .ds-flow-disclaimer{margin-top:10px}@media(max-width:600px){.ds-flow-lab{padding:22px 19px 16px}.ds-node-symbol{width:42px;height:42px;border-radius:9px}.ds-node-copy h3{font-size:14px}.ds-flow-disclaimer{font-size:11px;line-height:1.7}}\n@media(prefers-reduced-motion:reduce){.ds-button,.ds-text-link svg,.ds-contact-form-wrap input,.ds-desktop-nav a,.ds-scenario-tabs button,.ds-faq-list summary svg{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}",
+      "refersTo": "flow-surface"
+    },
+    {
+      "name": "Pergunta expansível",
+      "kind": "custom",
+      "description": "Details nativo separado por linhas; várias respostas podem permanecer abertas.",
+      "html": "<div class=\"ds-faq-list\"><details><summary>Preciso ter o projeto todo definido?<svg width=\"19\" height=\"19\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg></summary><div class=\"ds-faq-answer\"><p>Não. Você pode chegar com uma ideia, um processo que consome tempo ou uma aplicação que precisa evoluir.</p></div></details></div>",
+      "css": ".ds-faq-list details{border-top: 1px solid var(--line,#dbe7e2);}\n.ds-faq-list details:last-child{border-bottom: 1px solid var(--line,#dbe7e2);}\n.ds-faq-list summary{display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 22px;\n  list-style: none;\n  cursor: pointer;\n  font-size: 14px;\n  line-height: 1.6;\n  padding-block: 22px;\n  font-weight: 550;}\n.ds-faq-list summary::-webkit-details-marker{display: none;}\n.ds-faq-list summary:hover{color: var(--brand-deep,#087f70);}\n.ds-faq-list summary svg{transition: transform 0.2s;}\n.ds-faq-list details[open] summary svg{transform: rotate(180deg);}\n.ds-faq-answer{padding-bottom: 23px;}\n.ds-faq-answer p{color: var(--muted,#536b66);\n  font-size: 13px;\n  line-height: 1.85;}\n.ds-faq-answer .ds-text-link{font-size: 12px;\n  color: var(--brand-deep,#087f70);\n  margin-top: 8px;}.ds-faq-list{font-family:\"Inter\",ui-sans-serif,system-ui,sans-serif;color:var(--ink,#16332f);}.ds-faq-answer p{margin:0}.ds-faq-list summary:focus-visible{outline:3px solid var(--brand-deep,#087f70);outline-offset:5px;border-radius:3px}\n@media(prefers-reduced-motion:reduce){.ds-button,.ds-text-link svg,.ds-contact-form-wrap input,.ds-desktop-nav a,.ds-scenario-tabs button,.ds-faq-list summary svg{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Da ideia à operação",
+    "overview": "A identidade confirmada combina Inter sem serifas, branco, turquesa e verde escuro. A composição dá espaço à leitura e explica trabalho técnico por relações visíveis: títulos diretos, linhas de conexão, listas de entregas e estados de interação. A linguagem em português do Brasil deve continuar prática, compreensível para empresas e agências e sem clichês de IA.\n\nO sistema é predominantemente plano. Grandes campos de cor organizam a página; bordas discretas separam assuntos; ícones de traço ajudam a identificar ações e etapas. Animações têm função de resposta ou explicação. O logotipo existente é uma identidade a preservar, não uma tipografia a recriar.",
+    "keyCharacteristics": [
+      "Inter auto-hospedada, com hierarquia por escala e peso.",
+      "Branco e turquesa, apoiados por verde escuro e fundos de baixa saturação.",
+      "Superfícies planas, divisórias finas e cantos moderados.",
+      "Interação que explica um processo ou confirma uma ação.",
+      "Comunicação concreta, demonstrações identificadas e foco visível."
+    ],
+    "rules": [
+      {
+        "name": "The Brand Continuity Rule",
+        "body": "Preservar a identidade branca, turquesa e verde escuro; novas telas não introduzem outra família de acento por conveniência.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Family Rule",
+        "body": "Usar Inter em todos os papéis e construir contraste com tamanho, peso, espaçamento e cor; preservar a escolha explícita de uma identidade sem serifas.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Surface Rule",
+        "body": "Preservar superfícies planas; sombra comunica a sobreposição do menu ou a etapa ativa, sem transformar cada bloco de conteúdo em card elevado.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** preservar Inter auto-hospedada, o logotipo e a identidade branca, turquesa e verde escuro.",
+      "**Do** usar linhas e campos tonais para organizar conteúdo e reservar sombra aos papéis documentados.",
+      "**Do** fazer animações responderem a uma ação ou explicarem uma mudança, respeitando redução de movimento.",
+      "**Do** manter foco perceptível, rótulos associados e mensagens de estado compreensíveis.",
+      "**Do** identificar demonstrações ilustrativas e escrever entregas em português direto, sem prometer métricas não verificadas.",
+      "**Do** validar legibilidade e layout no navegador antes de aprovar uma nova superfície."
+    ],
+    "donts": [
+      "**Don't** introduzir serifas, gradientes ou clichês visuais e verbais de IA na identidade escolhida.",
+      "**Don't** transformar toda seção em uma grade de cards elevados.",
+      "**Don't** substituir ícones vetoriais funcionais por caracteres decorativos ou inventar novos selos e sobrancelhas de seção.",
+      "**Don't** promover tamanhos auxiliares compactos ou alvos reduzidos da home a padrões globais de acessibilidade.",
+      "**Don't** declarar a responsividade ou o contraste aprovados apenas pela leitura dos estilos."
+    ]
+  }
+}

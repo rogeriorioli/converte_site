@@ -1,15 +1,34 @@
-# Converte - High-End Digital Engineering
+# Converte
 
-> High-performance e-commerce and scalable web applications using Shopify, VTEX, React, and WordPress. Senior-level expertise delivered with the cost-efficiency of a global partner.
+> A Converte desenvolve aplicações web e lojas VTEX e Shopify, oferece SEO técnico e GEO, cria automações e agentes de IA e integra sistemas por APIs.
 
-## Summary
-Converte is a digital engineering partner specializing in building high-performance e-commerce and scalable web applications. They leverage modern technologies like Shopify, VTEX, React, and WordPress to deliver global-scale solutions.
+A Converte atende empresas e agências a partir do Brasil. Trabalha com projetos novos, evolução de sistemas existentes e parcerias técnicas para agências. O escopo, o investimento, os prazos e a continuidade são definidos após o entendimento de cada projeto.
 
-## Core Expertise
-- **E-commerce**: Specialized in Shopify and VTEX platforms.
-- **Web Applications**: Scalable React-based frontend development.
-- **CMS**: Professional WordPress implementations.
-- **Engineering**: High-end digital engineering with a focus on performance and scalability.
+O SEO oferecido é técnico. Em GEO, a Converte trabalha a organização e a clareza das informações existentes para experiências de busca e respostas com IA. Não há garantia de posição em buscas ou de citação por assistentes.
 
-## Contact & Links
-- Website: [https://www.convertesites.com.br/](https://www.convertesites.com.br/)
+## Serviços
+
+- [Aplicações web](https://www.convertesites.com.br/#aplicacoes): desenvolvimento de produtos digitais, MVPs, portais e sistemas internos; evolução e manutenção de aplicações existentes.
+- [VTEX e Shopify](https://www.convertesites.com.br/#ecommerce): implantação, desenvolvimento e personalização de lojas, integrações e evolução de operações de e-commerce.
+- [SEO técnico e GEO](https://www.convertesites.com.br/#seo-geo): diagnóstico técnico, rastreamento, indexação, performance, dados estruturados e organização das informações existentes para experiências com IA.
+- [Automações e agentes de IA](https://www.convertesites.com.br/#automacoes): automações com Microsoft Power Automate, Jira, Zendesk, fluxos do Google Workspace, Shopify Flow e n8n; agentes com Hermes Agent, da Nous Research, e supervisão conforme o projeto.
+- [Integrações de APIs](https://www.convertesites.com.br/#integracoes): conexões entre aplicações, CRMs, ERPs e outras ferramentas por APIs e webhooks, com tratamento de falhas e documentação.
+
+## Trabalho e parcerias
+
+- [Como trabalhamos](https://www.convertesites.com.br/#process): entendimento do desafio, planejamento, construção em ciclos e evolução.
+- [Parceria para agências](https://www.convertesites.com.br/#about): desenvolvimento, automações e integrações como extensão do time da agência.
+- [Exemplo de GEO](https://www.convertesites.com.br/#busca-e-ia): demonstração ilustrativa de conteúdo, documento llms.txt e uma possível resposta em chat. A Loja Exemplo e seus produtos são fictícios; a resposta não veio de uma IA real.
+
+## Contato
+
+- [Formulário de contato](https://www.convertesites.com.br/#contact): envie uma ideia, necessidade ou desafio para conversar sobre o projeto.
+- [WhatsApp](https://api.whatsapp.com/send?phone=5548991775899): +55 48 99177-5899.
+- [Instagram](https://instagram.com/convertesites): perfil da Converte.
+- [LinkedIn](https://www.linkedin.com/company/convertesites/): página da Converte.
+
+## Optional
+
+- [Site da Converte](https://www.convertesites.com.br/): página principal e informações sobre os serviços.
+- [Converte Flow](https://flow.convertesites.com.br/): site do produto Flow.
+- [Converte Turbo](https://turbo.convertesites.com.br/): site do produto Turbo.
